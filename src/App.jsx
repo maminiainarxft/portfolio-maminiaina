@@ -61,7 +61,7 @@ export default function Portfolio() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-black via-slate-900 to-gray-900 text-gray-200 antialiased">
+    <div className="min-h-screen bg-gray-900 text-gray-200 antialiased">
       {/* Navigation */}
       <nav className="fixed w-full z-40 top-2 sm:top-4 left-0 px-2 sm:px-6">
         <div className="max-w-6xl mx-auto flex justify-between items-center py-2 backdrop-blur-md bg-black/30 rounded-xl px-2 sm:px-4">
