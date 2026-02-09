@@ -15,39 +15,52 @@ const CV = {
 };
 
 // ---------- Typing animation ----------
+// ... (code précédent inchangé)
+
 function TypingTitle({ lines, speed = 80, pause = 1000 }) {
   const [index, setIndex] = useState(0);
   const [subIndex, setSubIndex] = useState(0);
   const [blink, setBlink] = useState(true);
 
   useEffect(() => {
-    // Si l'animation est finie, on arrête tout
-  if (index === lines.length) return;
+    // Si l'animation est terminée pour toutes les lignes
+    if (index === lines.length) return;
 
-  // Si on est arrivé à la fin de la ligne actuelle
-  if (subIndex === lines[index].length) {
+    // Si la ligne en cours est totalement écrite
+    if (subIndex === lines[index].length) {
+      const timeout = setTimeout(() => {
+        setIndex((prev) => prev + 1);
+        setSubIndex(0); // <--- IMPORTANT : On remet le compteur à 0 pour la nouvelle ligne
+      }, pause);
+      return () => clearTimeout(timeout);
+    }
+
+    // Sinon, on écrit la lettre suivante
     const timeout = setTimeout(() => {
-      setIndex((i) => i + 1); // On passe à la ligne suivante
-      setSubIndex(0);         // <--- C'EST ICI LA CORRECTION (On remet le compteur à 0)
-    }, pause);
+      setSubIndex((prev) => prev + 1);
+    }, speed);
+
     return () => clearTimeout(timeout);
-  }
+  }, [subIndex, index, lines, speed, pause]);
 
-  // Sinon, on tape la lettre suivante
-  const timeout = setTimeout(() => {
-    setSubIndex((s) => s + 1);
-  }, speed);
+  useEffect(() => {
+    const blinkInterval = setInterval(() => setBlink((b) => !b), 500);
+    return () => clearInterval(blinkInterval);
+  }, []);
 
-  return () => clearTimeout(timeout);
-}, [subIndex, index, lines, speed, pause]);
-}
+  // --- CORRECTION DE L'AFFICHAGE ICI ---
+  // On affiche toutes les lignes précédentes + le séparateur + le début de la ligne en cours
+  const text = index >= lines.length 
+    ? lines.join(' - ') 
+    : lines.slice(0, index).join(' - ') + (index > 0 ? ' - ' : '') + lines[index].slice(0, subIndex);
 
-// ---------- Section utility ----------
-function Section({ id, children }) {
   return (
-    <section id={id} className="min-h-screen py-12 sm:py-16 md:py-20 px-4 sm:px-6 lg:px-8 flex items-center">
-      <div className="max-w-6xl mx-auto w-full">{children}</div>
-    </section>
+    <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight">
+      <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-300 via-purple-300 to-pink-300">
+        {text}
+      </span>
+      <span className={`ml-1 ${blink ? 'opacity-100' : 'opacity-0'}`}>|</span>
+    </h1>
   );
 }
 
