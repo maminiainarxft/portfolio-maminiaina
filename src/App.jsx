@@ -251,7 +251,7 @@ export default function Portfolio() {
           <h2 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6">Tableau de synthèse E4</h2>
           <p className="text-sm sm:text-base text-gray-300 mb-3 sm:mb-4">Voici le tableau de synthèse des réalisations professionnelles du BTS SIO option SISR. Il présente les compétences mobilisées dans chaque activité.</p>
           <div className="bg-slate-800/40 p-4 sm:p-6 rounded-xl border border-white/10">
-            <a href="Tableau de synthese E4.pdf" download className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 rounded bg-pink-600/60 hover:bg-pink-600/80 transition text-xs sm:text-sm">
+            <a href="/Tableau de synthese E4.pdf" download className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 rounded bg-pink-600/60 hover:bg-pink-600/80 transition text-xs sm:text-sm">
               <FiDownload /> Télécharger le tableau de synthèse (PDF)
             </a>
           </div>
