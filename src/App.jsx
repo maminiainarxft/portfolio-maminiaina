@@ -13,29 +13,31 @@ const CV = {
   location: 'France',
   objective: "Passionné par les systèmes, réseaux et la cybersécurité. Je conçois, sécurise et administre des infrastructures informatiques modernes.",
 };
-
-// ---------- Typing animation ----------
-// ... (code précédent inchangé)
-
-function TypingTitle({ lines, speed = 80, pause = 1000 }) {
+function TypingTitle({ lines = [], speed = 80, pause = 1000 }) {
   const [index, setIndex] = useState(0);
   const [subIndex, setSubIndex] = useState(0);
   const [blink, setBlink] = useState(true);
 
   useEffect(() => {
-    // Si l'animation est terminée pour toutes les lignes
-    if (index === lines.length) return;
+    // SÉCURITÉ 1 : Si pas de lignes, on ne fait rien
+    if (!lines || lines.length === 0) return;
 
-    // Si la ligne en cours est totalement écrite
+    // Si l'animation est finie
+    if (index >= lines.length) return;
+
+    // SÉCURITÉ 2 : Si la ligne actuelle n'existe pas, on arrête
+    if (!lines[index]) return;
+
+    // Si la ligne est finie
     if (subIndex === lines[index].length) {
       const timeout = setTimeout(() => {
         setIndex((prev) => prev + 1);
-        setSubIndex(0); // <--- IMPORTANT : On remet le compteur à 0 pour la nouvelle ligne
+        setSubIndex(0);
       }, pause);
       return () => clearTimeout(timeout);
     }
 
-    // Sinon, on écrit la lettre suivante
+    // Sinon on écrit
     const timeout = setTimeout(() => {
       setSubIndex((prev) => prev + 1);
     }, speed);
@@ -48,11 +50,13 @@ function TypingTitle({ lines, speed = 80, pause = 1000 }) {
     return () => clearInterval(blinkInterval);
   }, []);
 
-  // --- CORRECTION DE L'AFFICHAGE ICI ---
-  // On affiche toutes les lignes précédentes + le séparateur + le début de la ligne en cours
+  // SÉCURITÉ 3 : Si pas de données, on n'affiche rien (évite l'écran blanc)
+  if (!lines || lines.length === 0) return null;
+
+  // Calcul du texte à afficher
   const text = index >= lines.length 
     ? lines.join(' - ') 
-    : lines.slice(0, index).join(' - ') + (index > 0 ? ' - ' : '') + lines[index].slice(0, subIndex);
+    : lines.slice(0, index).join(' - ') + (index > 0 ? ' - ' : '') + (lines[index] ? lines[index].slice(0, subIndex) : '');
 
   return (
     <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight">
