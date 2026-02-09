@@ -111,11 +111,29 @@ export default function Portfolio() {
       <header className="min-h-screen flex items-center px-4 sm:px-6 lg:px-8 justify-center">
         <div className="w-full max-w-5xl">
           <div className="text-sm sm:text-base text-indigo-300/80 mb-2">Bonjour, je suis</div>
+          
+          {/* Ton Animation de Nom et Titre */}
           <TypingTitle lines={[CV.name, CV.title]} />
-          <p className="mt-4 sm:mt-6 text-sm sm:text-base text-gray-300 max-w-xl">{CV.objective}</p>
+
+          {/* --- NOUVEAU BOUTON CV --- */}
+          <div className="mt-6 mb-8">
+            <a 
+              href="/CV_Maminiaina.pdf" // <--- Vérifie que le nom du fichier est exact !
+              download="CV_Maminiaina_Rafetraharivony.pdf"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-indigo-600 to-pink-600 text-white font-semibold shadow-lg hover:shadow-indigo-500/30 hover:scale-105 transition-all duration-300"
+            >
+              <FiDownload className="text-xl" />
+              Télécharger mon CV
+            </a>
+          </div>
+          {/* ------------------------- */}
+
+          <p className="mt-4 sm:mt-6 text-sm sm:text-base text-gray-300 max-w-xl leading-relaxed">
+            {CV.objective}
+          </p>
         </div>
       </header>
-
+      
       {/* ---------- Formation BTS SIO section ---------- */}
       <Section id="Le BTS">
         <motion.div 
