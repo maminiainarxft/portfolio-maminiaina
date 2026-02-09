@@ -202,23 +202,23 @@ export default function Portfolio() {
           <div className="bg-slate-800/40 p-4 sm:p-6 rounded-xl border border-white/10">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4">
               
-              <a href="/public/Documentation 2FA.pdf" download className="flex items-center gap-2 px-3 sm:px-4 py-2 rounded bg-slate-700/50 hover:bg-slate-700/80 transition text-xs sm:text-sm border border-white/5">
+              <a href="/Documentation 2FA.pdf" download className="flex items-center gap-2 px-3 sm:px-4 py-2 rounded bg-slate-700/50 hover:bg-slate-700/80 transition text-xs sm:text-sm border border-white/5">
                 <FiDownload /> Documentation 2FA
               </a>
 
-              <a href="/public/documentation ssh Maminiaina RAFETRAHARIVONY.pdf" download className="flex items-center gap-2 px-3 sm:px-4 py-2 rounded bg-slate-700/50 hover:bg-slate-700/80 transition text-xs sm:text-sm border border-white/5">
+              <a href="/documentation ssh Maminiaina RAFETRAHARIVONY.pdf" download className="flex items-center gap-2 px-3 sm:px-4 py-2 rounded bg-slate-700/50 hover:bg-slate-700/80 transition text-xs sm:text-sm border border-white/5">
                 <FiDownload /> Documentation SSH
               </a>
 
-              <a href="/public/DOCUMENTATION Load balancer.pdf" download className="flex items-center gap-2 px-3 sm:px-4 py-2 rounded bg-slate-700/50 hover:bg-slate-700/80 transition text-xs sm:text-sm border border-white/5">
+              <a href="/DOCUMENTATION Load balancer.pdf" download className="flex items-center gap-2 px-3 sm:px-4 py-2 rounded bg-slate-700/50 hover:bg-slate-700/80 transition text-xs sm:text-sm border border-white/5">
                 <FiDownload /> Documentation Load Balancer
               </a>
 
-              <a href="/public/DOCUMENTATION Zabbix RAFETRAHARIVONY Maminiaina.pdf" download className="flex items-center gap-2 px-3 sm:px-4 py-2 rounded bg-slate-700/50 hover:bg-slate-700/80 transition text-xs sm:text-sm border border-white/5">
+              <a href="/DOCUMENTATION Zabbix RAFETRAHARIVONY Maminiaina.pdf" download className="flex items-center gap-2 px-3 sm:px-4 py-2 rounded bg-slate-700/50 hover:bg-slate-700/80 transition text-xs sm:text-sm border border-white/5">
                 <FiDownload /> Documentation Zabbix
               </a>
 
-              <a href="/public/DOCUMENTATION installation archlinux maminiaina RAFETRAHARIVONY.pdf" download className="flex items-center gap-2 px-3 sm:px-4 py-2 rounded bg-slate-700/50 hover:bg-slate-700/80 transition text-xs sm:text-sm border border-white/5">
+              <a href="/DOCUMENTATION installation archlinux maminiaina RAFETRAHARIVONY.pdf" download className="flex items-center gap-2 px-3 sm:px-4 py-2 rounded bg-slate-700/50 hover:bg-slate-700/80 transition text-xs sm:text-sm border border-white/5">
                 <FiDownload /> Installation Arch Linux
               </a>
 
