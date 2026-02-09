@@ -1,5 +1,4 @@
-// Portfolio_MaminiainaRafetraharivony.jsx — version enrichie avec section Projet téléchargeable et Tableau de synthèse PDF
-
+// Portfolio_MaminiainaRafetraharivony.jsx
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { FiMail, FiPhone, FiMapPin, FiDownload } from 'react-icons/fi';
@@ -13,6 +12,8 @@ const CV = {
   location: 'France',
   objective: "Passionné par les systèmes, réseaux et la cybersécurité. Je conçois, sécurise et administre des infrastructures informatiques modernes.",
 };
+
+// ---------- Composant Animation Texte ----------
 function TypingTitle({ lines = [], speed = 80, pause = 1000 }) {
   const [index, setIndex] = useState(0);
   const [subIndex, setSubIndex] = useState(0);
@@ -50,7 +51,7 @@ function TypingTitle({ lines = [], speed = 80, pause = 1000 }) {
     return () => clearInterval(blinkInterval);
   }, []);
 
-  // SÉCURITÉ 3 : Si pas de données, on n'affiche rien (évite l'écran blanc)
+  // SÉCURITÉ 3 : Si pas de données, on n'affiche rien
   if (!lines || lines.length === 0) return null;
 
   // Calcul du texte à afficher
@@ -68,7 +69,16 @@ function TypingTitle({ lines = [], speed = 80, pause = 1000 }) {
   );
 }
 
-<TypingTitle lines={[CV.name, CV.title]} />
+// ---------- Composant Section (C'était le morceau manquant !) ----------
+function Section({ id, children }) {
+  return (
+    <section id={id} className="min-h-screen py-16 sm:py-20 px-4 sm:px-6 lg:px-8 flex flex-col justify-center">
+      <div className="max-w-5xl mx-auto w-full">
+        {children}
+      </div>
+    </section>
+  );
+}
 
 // ---------- Main component ----------
 export default function Portfolio() {
@@ -98,8 +108,8 @@ export default function Portfolio() {
       </nav>
 
       {/* Hero */}
-      <header className="min-h-screen flex items-center px-4 sm:px-6 lg:px-8">
-        <div className="w-full">
+      <header className="min-h-screen flex items-center px-4 sm:px-6 lg:px-8 justify-center">
+        <div className="w-full max-w-5xl">
           <div className="text-sm sm:text-base text-indigo-300/80 mb-2">Bonjour, je suis</div>
           <TypingTitle lines={[CV.name, CV.title]} />
           <p className="mt-4 sm:mt-6 text-sm sm:text-base text-gray-300 max-w-xl">{CV.objective}</p>
@@ -114,7 +124,6 @@ export default function Portfolio() {
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
-          
           {/* Grille pour séparer les deux définitions */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
 
@@ -157,13 +166,12 @@ export default function Portfolio() {
         </motion.div>
       </Section>
 
-    {/* ---------- Expérience section ---------- */}
+      {/* ---------- Expérience section ---------- */}
       <Section id="Experience">
         <motion.div initial={{ opacity: 0, y: 15 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
           <h2 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6">Expérience professionnelle</h2>
           
           <div className="bg-slate-800/40 p-4 sm:p-6 rounded-xl border border-white/10">
-            
             {/* En-tête de l'expérience */}
             <div>
               <h3 className="font-semibold text-base sm:text-lg text-indigo-300">Technicien support système (stage)</h3>
@@ -182,7 +190,6 @@ export default function Portfolio() {
                 <li>Déploiement de software (SCCM)</li>
               </ul>
             </div>
-
           </div>
         </motion.div>
       </Section>
