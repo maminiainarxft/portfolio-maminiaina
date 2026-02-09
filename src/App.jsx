@@ -21,27 +21,25 @@ function TypingTitle({ lines, speed = 80, pause = 1000 }) {
   const [blink, setBlink] = useState(true);
 
   useEffect(() => {
-    if (index === lines.length) return;
-    if (subIndex === lines[index].length) {
-      const timeout = setTimeout(() => setIndex((i) => i + 1), pause);
-      return () => clearTimeout(timeout);
-    }
-    const timeout = setTimeout(() => setSubIndex((s) => s + 1), speed);
+    // Si l'animation est finie, on arrête tout
+  if (index === lines.length) return;
+
+  // Si on est arrivé à la fin de la ligne actuelle
+  if (subIndex === lines[index].length) {
+    const timeout = setTimeout(() => {
+      setIndex((i) => i + 1); // On passe à la ligne suivante
+      setSubIndex(0);         // <--- C'EST ICI LA CORRECTION (On remet le compteur à 0)
+    }, pause);
     return () => clearTimeout(timeout);
-  }, [index, subIndex, lines, speed, pause]);
+  }
 
-  useEffect(() => {
-    const blinkInterval = setInterval(() => setBlink((b) => !b), 500);
-    return () => clearInterval(blinkInterval);
-  }, []);
+  // Sinon, on tape la lettre suivante
+  const timeout = setTimeout(() => {
+    setSubIndex((s) => s + 1);
+  }, speed);
 
-  const text = index >= lines.length ? lines.join(' - ') : lines[index].slice(0, subIndex);
-  return (
-    <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight">
-      <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-300 via-purple-300 to-pink-300">{text}</span>
-      <span className={`ml-1 ${blink ? 'opacity-100' : 'opacity-0'}`}>|</span>
-    </h1>
-  );
+  return () => clearTimeout(timeout);
+}, [subIndex, index, lines, speed, pause]);
 }
 
 // ---------- Section utility ----------
