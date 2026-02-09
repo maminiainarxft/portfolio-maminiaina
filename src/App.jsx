@@ -94,7 +94,7 @@ export default function Portfolio() {
         <div className="max-w-6xl mx-auto flex justify-between items-center py-2 backdrop-blur-md bg-black/30 rounded-xl px-2 sm:px-4">
           <div className="flex items-center gap-2 sm:gap-3">
             <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-md bg-gradient-to-r from-indigo-700 to-pink-600 flex items-center justify-center font-bold text-white text-xs sm:text-base">MR</div>
-            <button onClick={() => scrollTo('hero')} className="hidden sm:block text-sm font-bold hover:text-indigo-300 transition-colors cursor-pointer"> {CV.name}</button>
+            <button onClick={() => scrollTo('hero')} className="hidden sm:block text-sm font-bold hover:text-indigo-300 transition-colors cursor-pointer">{CV.name}</button>
           </div>
           <div className="flex gap-1 sm:gap-2 md:gap-4 flex-wrap justify-end">
             <button onClick={() => scrollTo('Le BTS')} className="hover:text-indigo-300 text-xs sm:text-sm px-1 sm:px-2">Le BTS</button>
