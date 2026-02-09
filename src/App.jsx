@@ -68,6 +68,8 @@ function TypingTitle({ lines = [], speed = 80, pause = 1000 }) {
   );
 }
 
+<TypingTitle lines={[CV.name, CV.title]} />
+
 // ---------- Main component ----------
 export default function Portfolio() {
   const scrollTo = (id) => {
