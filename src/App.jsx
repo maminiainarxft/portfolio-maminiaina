@@ -240,6 +240,11 @@ export default function Portfolio() {
                 <FiDownload /> Installation Arch Linux
               </a>
 
+              <a href="/Documentation GLPI.pdf" download className="flex items-center gap-2 px-3 sm:px-4 py-2 rounded bg-slate-700/50 hover:bg-slate-700/80 transition text-xs sm:text-sm border border-white/5">
+                <FiDownload /> Documentation GLPI
+              </a>
+
+              
             </div>
           </div>
         </motion.div>
