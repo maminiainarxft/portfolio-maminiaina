@@ -117,15 +117,9 @@ export default function Portfolio() {
 
           {/* --- NOUVEAU BOUTON CV --- */}
           <div className="mt-6 mb-8">
-            <a href="CV_MaminiainaRafetraharivony.pdf" // <--- Vérifie que le nom du fichier est exact !
-              download="CV_MaminiainaRafetraharivony.pdf"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white text-indigo-950 font-bold shadow-lg shadow-black/10 hover:bg-indigo-50 hover:scale-105 transition-all duration-300">
-              <FiDownload className="text-xl" />
-              Télécharger mon CV
-            </a>
-          </div>
-          {/* ------------------------- */}
-
+          <a href="CV_Maminiaina_Rafetraharivony.pdf" download="CV_Maminiaina_Rafetraharivony.pdf" {/* NOUVELLES CLASSES CI-DESSOUS : */} className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white text-indigo-950 font-bold shadow-lg shadow-black/10 hover:bg-indigo-50 hover:scale-105 transition-all duration-300"> <FiDownload className="text-xl" />Télécharger mon CV</a>
+        </div>
+        {/* ------------------------- */}
           <p className="mt-4 sm:mt-6 text-sm sm:text-base text-gray-300 max-w-xl leading-relaxed">
             {CV.objective}
           </p>
