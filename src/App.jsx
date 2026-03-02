@@ -18,7 +18,7 @@ const CV = {
 const proProjects = [
   {
     title: "Gestion de parc sous GLPI",
-    date: "Août 2023",
+    date: "Mai 2025",
     icon: "🏢",
     context: "Optimisation de la gestion des tickets et de l'inventaire matériel dans le cadre de mon stage chez METRO.",
     interest: "Centraliser les demandes d'assistance, réduire le temps de résolution et automatiser l'inventaire via des agents.",
@@ -29,7 +29,7 @@ const proProjects = [
 const schoolProjects = [
   {
     title: "Mise en place Load Balancer",
-    date: "Février 2024",
+    date: "Février 2025",
     icon: "⚖️",
     context: "Projet d'infrastructure haute disponibilité en environnement virtuel.",
     interest: "Répartir la charge entre plusieurs serveurs web pour garantir la continuité de service en cas de panne.",
@@ -37,7 +37,7 @@ const schoolProjects = [
   },
   {
     title: "Supervision Zabbix",
-    date: "Novembre 2023",
+    date: "Novembre 2024",
     icon: "📈",
     context: "Déploiement d'une solution de monitoring pour le réseau de l'école.",
     interest: "Anticiper les pannes réseaux et matérielles grâce à des remontées d'alertes en temps réel.",
@@ -45,7 +45,7 @@ const schoolProjects = [
   },
   {
     title: "Sécurisation 2FA & SSH",
-    date: "Septembre 2023",
+    date: "Janvier 2025",
     icon: "🔐",
     context: "Durcissement des accès serveurs Linux dans le cadre des TP de sécurité.",
     interest: "Bloquer les attaques par force brute et garantir l'identité des administrateurs.",
@@ -56,7 +56,7 @@ const schoolProjects = [
   },
   {
     title: "Installation Arch Linux",
-    date: "Février 2023",
+    date: "Décembre 2025",
     icon: "🐧",
     context: "Déploiement d'un système Linux 'from scratch' sans interface graphique par défaut.",
     interest: "Maîtriser l'architecture fondamentale d'un système UNIX et le partitionnement avancé.",
