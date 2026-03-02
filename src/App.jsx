@@ -118,7 +118,7 @@ export default function Portfolio() {
           {/* --- NOUVEAU BOUTON CV --- */}
           <div className="mt-6 mb-8">
             <a 
-              href="/CV_Maminiaina.pdf" // <--- Vérifie que le nom du fichier est exact !
+              href="/CV_MaminiainaRafetraharivony.pdf" // <--- Vérifie que le nom du fichier est exact !
               download="CV_Maminiaina_Rafetraharivony.pdf"
               className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-indigo-600 to-pink-600 text-white font-semibold shadow-lg hover:shadow-indigo-500/30 hover:scale-105 transition-all duration-300"
             >
