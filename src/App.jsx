@@ -69,7 +69,7 @@ function TypingTitle({ lines = [], speed = 80, pause = 1000 }) {
   );
 }
 
-// ---------- Composant Section (C'était le morceau manquant !) ----------
+// ---------- Composant Section ----------
 function Section({ id, children }) {
   return (
     <section id={id} className="min-h-screen py-16 sm:py-20 px-4 sm:px-6 lg:px-8 flex flex-col justify-center">
@@ -115,11 +115,19 @@ export default function Portfolio() {
           {/* Ton Animation de Nom et Titre */}
           <TypingTitle lines={[CV.name, CV.title]} />
 
-          {/* --- NOUVEAU BOUTON CV --- */}
+          {/* --- BOUTON CV MODIFIÉ ICI --- */}
           <div className="mt-6 mb-8">
-          <a href="CV_Maminiaina_Rafetraharivony.pdf" download="CV_Maminiaina_Rafetraharivony.pdf" {/* NOUVELLES CLASSES CI-DESSOUS : */} className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white text-indigo-950 font-bold shadow-lg shadow-black/10 hover:bg-indigo-50 hover:scale-105 transition-all duration-300"> <FiDownload className="text-xl" />Télécharger mon CV</a>
-        </div>
-        {/* ------------------------- */}
+            <a 
+              href="CV_Maminiaina_Rafetraharivony.pdf" 
+              download="CV_Maminiaina_Rafetraharivony.pdf" 
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white text-indigo-950 font-bold shadow-lg shadow-black/10 hover:bg-indigo-50 hover:scale-105 transition-all duration-300"
+            > 
+              <FiDownload className="text-xl" />
+              Télécharger mon CV
+            </a>
+          </div>
+          {/* ------------------------- */}
+          
           <p className="mt-4 sm:mt-6 text-sm sm:text-base text-gray-300 max-w-xl leading-relaxed">
             {CV.objective}
           </p>
@@ -225,103 +233,4 @@ export default function Portfolio() {
               </a>
 
               <a href="/DOCUMENTATION Zabbix RAFETRAHARIVONY Maminiaina.pdf" download className="flex items-center gap-2 px-3 sm:px-4 py-2 rounded bg-slate-700/50 hover:bg-slate-700/80 transition text-xs sm:text-sm border border-white/5">
-                <FiDownload /> Documentation Zabbix
-              </a>
-
-              <a href="/DOCUMENTATION installation archlinux maminiaina RAFETRAHARIVONY.pdf" download className="flex items-center gap-2 px-3 sm:px-4 py-2 rounded bg-slate-700/50 hover:bg-slate-700/80 transition text-xs sm:text-sm border border-white/5">
-                <FiDownload /> Installation Arch Linux
-              </a>
-
-              <a href="/Documentation GLPI.pdf" download className="flex items-center gap-2 px-3 sm:px-4 py-2 rounded bg-slate-700/50 hover:bg-slate-700/80 transition text-xs sm:text-sm border border-white/5">
-                <FiDownload /> Documentation GLPI
-              </a>
-
-              
-            </div>
-          </div>
-        </motion.div>
-      </Section>
-
-      {/* Tableau de synthèse section */}
-      <Section id="tableau">
-        <motion.div initial={{ opacity: 0, y: 15 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
-          <h2 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6">Tableau de synthèse E4</h2>
-          <p className="text-sm sm:text-base text-gray-300 mb-3 sm:mb-4">Voici le tableau de synthèse des réalisations professionnelles du BTS SIO option SISR. Il présente les compétences mobilisées dans chaque activité.</p>
-          <div className="bg-slate-800/40 p-4 sm:p-6 rounded-xl border border-white/10">
-            <a href="/Tableau de synthese E4.pdf" download className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 rounded bg-pink-600/60 hover:bg-pink-600/80 transition text-xs sm:text-sm">
-              <FiDownload /> Télécharger le tableau de synthèse (PDF)
-            </a>
-          </div>
-        </motion.div>
-      </Section>
-      
-      {/* ---------- Veille Technologique section ---------- */}
-      <Section id="veille">
-        <motion.div initial={{ opacity: 0, y: 15 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
-          
-          {/* Titre de la veille */}
-          <h2 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6">Veille technologique : Lunettes IA d'Iron Man</h2>
-          
-          {/* Conteneur pour le contenu de la veille */}
-          <div className="bg-slate-800/40 p-4 sm:p-6 rounded-xl border border-white/10 space-y-4 sm:space-y-6">
-            
-            <p className="text-sm sm:text-base text-gray-300">
-              Plusieurs avancées technologiques se rapprochent du concept de lunettes intelligentes comme dans la fiction :
-            </p>
-
-            {/* Listes des avancées et freins */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
-              
-              {/* Avancées */}
-              <div>
-                <h3 className="font-semibold text-base sm:text-lg mb-2 sm:mb-3 text-indigo-300">Avancées technologiques</h3>
-                <ul className="list-disc list-inside space-y-1 sm:space-y-2 text-xs sm:text-sm">
-                  <li><span className="font-semibold">AR :</span> Meta, Apple Vision Pro</li>
-                  <li><span className="font-semibold">IA embarquée :</span> Snapdragon XR2 Gen 2</li>
-                  <li><span className="font-semibold">Connectivité :</span> 5G / Wi-Fi 6</li>
-                  <li><span className="font-semibold">Contrôle :</span> Oculaire / Gestuel</li>
-                </ul>
-              </div>
-
-              {/* Freins */}
-              <div>
-                <h3 className="font-semibold text-base sm:text-lg mb-2 sm:mb-3 text-pink-300">Freins techniques</h3>
-                <ul className="list-disc list-inside space-y-1 sm:space-y-2 text-xs sm:text-sm">
-                  <li>Miniaturisation complexe</li>
-                  <li>Autonomie limitée</li>
-                  <li>Problèmes de vie privée</li>
-                  <li>Coûts de fabrication élevés</li>
-                  <li>Acceptation sociale réduite</li>
-                </ul>
-              </div>
-            </div>
-
-            {/* Sources */}
-            <div>
-              <h4 className="font-semibold mb-2 text-sm sm:text-base">Sources :</h4>
-              <p className="text-xs sm:text-sm text-gray-400">
-                <li><a href="https://www.youtube.com/watch?v=WW-P3limYc0" className="hover:text-indigo-300 break-all">Youtube.com</a></li>
-                <li><a href="https://www.youtube.com/watch?v=YHap1eSs7cg&pp=ygUKbHVuZXR0ZSBJQQ%3D%3D" className="hover:text-indigo-300 break-all">Frandroid</a></li>
-                <li><a href="https://www.realite-virtuelle.com/surface-keyboard-le-meta-quest-3-devient-soudain-beaucoup-plus-tentant/" className="hover:text-indigo-300 break-all">Realite-virtuelle.com</a></li>
-              </p>
-            </div>
-          </div>
-        </motion.div>
-      </Section>
-
-      {/* Contact */}
-      <Section id="contact">
-        <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 0.6 }}>
-          <h2 className="text-xl sm:text-2xl font-bold mb-4">Contact</h2>
-          <div className="flex flex-col gap-2 sm:gap-3">
-            <div className="flex items-center gap-2 text-sm sm:text-base break-all"><FiMail /> {CV.email}</div>
-            <div className="flex items-center gap-2 text-sm sm:text-base"><FiPhone /> {CV.phone}</div>
-            <div className="flex items-center gap-2 text-sm sm:text-base"><FiMapPin /> {CV.location}</div>
-          </div>
-        </motion.div>
-      </Section>
-
-      <footer className="py-6 sm:py-8 text-center text-xs sm:text-sm text-gray-400 px-4">© {new Date().getFullYear()} {CV.name} — Portfolio interactif</footer>
-    </div>
-  );
-}
+                <FiDownload /> Documentation
