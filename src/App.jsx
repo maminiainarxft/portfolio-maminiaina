@@ -460,6 +460,7 @@ export default function Portfolio() {
 
       <footer className="py-8 text-center text-sm text-gray-500 border-t border-white/5 bg-black/20">
         © {new Date().getFullYear()} {CV.name} — Portfolio Maminiaina Rafetraharivony. Tous droits réservés.
+      </footer>
     </div>
   );
 }
