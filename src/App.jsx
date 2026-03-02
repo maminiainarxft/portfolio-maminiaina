@@ -144,7 +144,7 @@ export default function Portfolio() {
           >
             <button className="absolute top-6 right-6 text-white text-3xl hover:text-pink-400"><FiX /></button>
             {/* L'image de ton tableau viendra ici */}
-            <img src="./apercu_e4.jpg" alt="Aperçu Tableau E4" className="max-w-full max-h-[90vh] object-contain rounded-lg border border-white/20 shadow-2xl" />
+            <img src="apercu_e4.jpg" alt="Aperçu Tableau E4" className="max-w-full max-h-[90vh] object-contain rounded-lg border border-white/20 shadow-2xl" />
           </motion.div>
         )}
       </AnimatePresence>
