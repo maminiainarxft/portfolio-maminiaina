@@ -157,7 +157,7 @@ export default function Portfolio() {
             <button onClick={() => scrollTo('hero')} className="hidden sm:block text-sm font-bold hover:text-indigo-300 transition-colors cursor-pointer">{CV.name}</button>
           </div>
           <div className="flex gap-1 sm:gap-2 md:gap-4 flex-wrap justify-end">
-            <button onClick={() => scrollTo('Le BTS')} className="hover:text-indigo-300 text-xs sm:text-sm px-1 sm:px-2">BTS</button>
+            <button onClick={() => scrollTo('parcours')} className="hover:text-indigo-300 text-xs sm:text-sm px-1 sm:px-2">Parcours</button>
             <button onClick={() => scrollTo('Experience')} className="hover:text-indigo-300 text-xs sm:text-sm px-1 sm:px-2 hidden sm:inline">Expérience</button>
             <button onClick={() => scrollTo('projects')} className="hover:text-indigo-300 text-xs sm:text-sm px-1 sm:px-2">Projets</button>
             <button onClick={() => scrollTo('tableau')} className="hover:text-indigo-300 text-xs sm:text-sm px-1 sm:px-2 hidden md:inline">Tableau E4</button>
@@ -197,6 +197,59 @@ export default function Portfolio() {
           </p>
         </div>
       </header>
+
+      {/* ---------- Parcours Scolaire section ---------- */}
+      <Section id="parcours">
+        <motion.div 
+          initial={{ opacity: 0, y: 30 }} 
+          whileInView={{ opacity: 1, y: 0 }} 
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+        >
+          <h2 className="text-2xl sm:text-3xl font-bold mb-8 flex items-center gap-3">
+            🎓 Parcours Scolaire
+          </h2>
+
+          <div className="space-y-6 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-indigo-500 before:to-pink-500">
+            
+            {/* 1. BTS SIO SISR */}
+            <div className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+              <div className="flex items-center justify-center w-10 h-10 rounded-full border-4 border-gray-900 bg-indigo-500 text-white shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">
+                <FiBookOpen className="text-sm" />
+              </div>
+              <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-slate-800/40 p-6 rounded-xl border border-white/10 hover:border-indigo-500/50 transition-colors">
+                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2">
+                  <h3 className="font-bold text-lg text-indigo-300">BTS SIO - Option SISR</h3>
+                </div>
+                <p className="text-sm text-gray-300 mb-3">
+                  Service Informatique aux Organisations, orienté <strong className="text-white">Solutions d'Infrastructure, Systèmes et Réseaux</strong>.
+                </p>
+                <div className="text-xs text-gray-400 space-y-2 bg-black/20 p-3 rounded-lg">
+                  <p><strong className="text-pink-300">Objectif :</strong> Former des informaticiens capables d'administrer, sécuriser et maintenir des réseaux informatiques.</p>
+                  <p><strong className="text-pink-300">Métiers visés :</strong> Technicien support, Administrateur systèmes et réseaux, Ingénieur réseau junior.</p>
+                </div>
+              </div>
+            </div>
+
+            {/* 2. Baccalauréat */}
+            <div className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+              <div className="flex items-center justify-center w-10 h-10 rounded-full border-4 border-gray-900 bg-pink-500 text-white shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">
+                <FiCheckCircle className="text-sm" />
+              </div>
+              <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-slate-800/40 p-6 rounded-xl border border-white/10 hover:border-pink-500/50 transition-colors">
+                <h3 className="font-bold text-lg text-pink-300">Baccalauréat Général</h3>
+                <p className="text-sm text-gray-300 mt-1">
+                  Lycée général et technologique Descartes
+                </p>
+                <p className="text-xs text-gray-400 mt-2 flex items-center gap-1">
+                  <FiMapPin /> Antony, France
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </motion.div>
+      </Section>  
 
       {/* ---------- Expérience section (Remontée car très important) ---------- */}
       <Section id="Experience">
