@@ -347,7 +347,7 @@ export default function Portfolio() {
               </div>
               {/* IMAGE A CHANGER PAR LA TIENNE PLUS TARD */}
               <div className="w-full aspect-[4/3] bg-slate-700 rounded-xl border-2 border-dashed border-slate-500 flex flex-col items-center justify-center overflow-hidden relative">
-                <img src="apercu_e4.jpg" alt="Aperçu indisponible" className="object-cover opacity-30 w-full h-full" onError={(e) => e.target.style.display='none'} />
+                <img src="./apercu_e4.jpg" alt="Aperçu indisponible" className="object-cover opacity-30 w-full h-full" onError={(e) => e.target.style.display='none'} />
                 <div className="absolute flex flex-col items-center text-slate-400">
                   <FiBookOpen className="text-4xl mb-2" />
                   <span className="text-sm font-semibold">Cliquer pour voir l'aperçu</span>
