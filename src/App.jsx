@@ -424,7 +424,7 @@ export default function Portfolio() {
                 <li className="flex items-center gap-2 text-sm text-gray-300"><FiCheckCircle className="text-green-400" /> Sécuriser les équipements et les usages</li>
               </ul>
 
-              <a href="Tableau de synthese E4.pdf" download className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-pink-600 hover:bg-pink-500 text-white font-semibold transition-colors shadow-lg shadow-pink-500/20">
+              <a href="Tableau de synthese E4.pdf" download className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white text-indigo-950 font-bold shadow-lg hover:bg-indigo-50 hover:scale-105 transition-all duration-300">
                 <FiDownload /> Télécharger le PDF officiel
               </a>
             </div>
