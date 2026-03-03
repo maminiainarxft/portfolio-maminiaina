@@ -251,51 +251,89 @@ export default function Portfolio() {
         </motion.div>
       </Section>  
 
-      {/* ---------- Expérience section (Remontée car très important) ---------- */}
+      {/* ---------- Expérience section ---------- */}
       <Section id="Experience">
         <motion.div initial={{ opacity: 0, y: 15 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
           <h2 className="text-2xl sm:text-3xl font-bold mb-8 flex items-center gap-3"><FiBriefcase className="text-indigo-400" /> Expérience professionnelle</h2>
           
-          <div className="bg-slate-800/40 p-6 sm:p-8 rounded-2xl border border-white/10 relative overflow-hidden">
-            {/* Ligne de timeline décorative */}
-            <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-indigo-500 to-pink-500"></div>
+          <div className="space-y-6"> {/* <-- Conteneur pour espacer les expériences */}
             
-            <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
-              <div>
-                <h3 className="font-bold text-xl text-white">Technicien support système (Stage)</h3>
-                <p className="text-indigo-300 font-semibold mt-1">METRO France — Nanterre</p>
+            {/* --- EXPÉRIENCE 1 (ANATOM'S) --- */}
+            <div className="bg-slate-800/40 p-6 sm:p-8 rounded-2xl border border-white/10 relative overflow-hidden">
+              <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-indigo-500 to-pink-500"></div>
+              
+              <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
+                <div>
+                  <h3 className="font-bold text-xl text-white">Technicien support (stage)</h3>
+                  <p className="text-indigo-300 font-semibold mt-1">ANATOM'S — Châtillon</p>
+                </div>
+                <span className="text-sm text-gray-400 bg-gray-800 px-3 py-1 rounded-full mt-2 md:mt-0 w-fit">2026</span>
               </div>
-              <span className="text-sm text-gray-400 bg-gray-800 px-3 py-1 rounded-full mt-2 md:mt-0 w-fit">2023</span>
+
+              <div className="mb-6">
+                <p className="text-sm text-gray-300 bg-black/20 p-4 rounded-lg border border-white/5 italic">
+                  <span className="font-semibold text-white not-italic">Contexte : </span> 
+                  ANATOM'S est une association qui distribue de la nourriture aux personnes dans le besoin. En tant que technicien support, j'ai assuré la maintenance du parc informatique, la gestion des incidents et la formation des utilisateurs sur les outils de gestion interne, contribuant ainsi à l'efficacité opérationnelle de l'association.
+                </p>
+              </div>
+
+              <div>
+                <p className="font-semibold mb-3 text-white">Projets et missions réalisés :</p>
+                <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                  <li className="flex gap-2 items-start text-sm text-gray-300">
+                    <FiCheckCircle className="text-pink-400 mt-1 shrink-0" />
+                    <span><strong>Support N1 :</strong> Résolution d'incidents utilisateurs via la gestion de tickets</span>
+                  </li>
+                  <li className="flex gap-2 items-start text-sm text-gray-300">
+                    <FiCheckCircle className="text-pink-400 mt-1 shrink-0" />
+                    <span><strong>Masterisation :</strong> Préparation et déploiement logiciel automatisé de nouveaux postes.</span>
+                  </li>
+                </ul>
+              </div>
             </div>
 
-            <div className="mb-6">
-              <p className="text-sm text-gray-300 bg-black/20 p-4 rounded-lg border border-white/5 italic">
-                <span className="font-semibold text-white not-italic">Contexte : </span> 
-                METRO est le premier fournisseur de la restauration indépendante en France. Intégré à la DSI, j'ai participé au maintien en condition opérationnelle du parc informatique des collaborateurs du siège et des entrepôts, en assurant la transition technologique vers de nouveaux standards.
-              </p>
+            {/* --- EXPÉRIENCE 2 (METRO France) --- */}
+            <div className="bg-slate-800/40 p-6 sm:p-8 rounded-2xl border border-white/10 relative overflow-hidden">
+              <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-pink-500 to-indigo-500"></div>
+              
+              <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
+                <div>
+                  <h3 className="font-bold text-xl text-white">Technicien support système (Stage)</h3>
+                  <p className="text-indigo-300 font-semibold mt-1">METRO France — Nanterre</p>
+                </div>
+                <span className="text-sm text-gray-400 bg-gray-800 px-3 py-1 rounded-full mt-2 md:mt-0 w-fit">2025</span>
+              </div>
+
+              <div className="mb-6">
+                <p className="text-sm text-gray-300 bg-black/20 p-4 rounded-lg border border-white/5 italic">
+                  <span className="font-semibold text-white not-italic">Contexte : </span> 
+                  METRO est le premier fournisseur de la restauration indépendante en France. Intégré à la DSI, j'ai participé au maintien en condition opérationnelle du parc informatique des collaborateurs du siège et des entrepôts, en assurant la transition technologique vers de nouveaux standards.
+                </p>
+              </div>
+
+              <div>
+                <p className="font-semibold mb-3 text-white">Projets et missions réalisés :</p>
+                <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                  <li className="flex gap-2 items-start text-sm text-gray-300">
+                    <FiCheckCircle className="text-pink-400 mt-1 shrink-0" />
+                    <span><strong>Migration d'OS :</strong> Déploiement et migration des postes de Windows 10 vers Windows 11 via SCCM.</span>
+                  </li>
+                  <li className="flex gap-2 items-start text-sm text-gray-300">
+                    <FiCheckCircle className="text-pink-400 mt-1 shrink-0" />
+                    <span><strong>Support N1 :</strong> Résolution d'incidents utilisateurs via la gestion de tickets (JIRA).</span>
+                  </li>
+                  <li className="flex gap-2 items-start text-sm text-gray-300">
+                    <FiCheckCircle className="text-pink-400 mt-1 shrink-0" />
+                    <span><strong>Gestion des identités :</strong> Administration courante sur Active Directory (RAT).</span>
+                  </li>
+                  <li className="flex gap-2 items-start text-sm text-gray-300">
+                    <FiCheckCircle className="text-pink-400 mt-1 shrink-0" />
+                    <span><strong>Masterisation :</strong> Préparation et déploiement logiciel automatisé de nouveaux postes (SCCM).</span>
+                  </li>
+                </ul>
+              </div>
             </div>
 
-            <div>
-              <p className="font-semibold mb-3 text-white">Projets et missions réalisés :</p>
-              <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                <li className="flex gap-2 items-start text-sm text-gray-300">
-                  <FiCheckCircle className="text-pink-400 mt-1 shrink-0" />
-                  <span><strong>Migration d'OS :</strong> Déploiement et migration des postes de Windows 10 vers Windows 11 via SCCM.</span>
-                </li>
-                <li className="flex gap-2 items-start text-sm text-gray-300">
-                  <FiCheckCircle className="text-pink-400 mt-1 shrink-0" />
-                  <span><strong>Support N1/N2 :</strong> Résolution d'incidents utilisateurs via la gestion de tickets (JIRA).</span>
-                </li>
-                <li className="flex gap-2 items-start text-sm text-gray-300">
-                  <FiCheckCircle className="text-pink-400 mt-1 shrink-0" />
-                  <span><strong>Gestion des identités :</strong> Administration courante sur Active Directory (RAT).</span>
-                </li>
-                <li className="flex gap-2 items-start text-sm text-gray-300">
-                  <FiCheckCircle className="text-pink-400 mt-1 shrink-0" />
-                  <span><strong>Masterisation :</strong> Préparation et déploiement logiciel automatisé de nouveaux postes (SCCM).</span>
-                </li>
-              </ul>
-            </div>
           </div>
         </motion.div>
       </Section>
