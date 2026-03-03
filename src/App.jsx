@@ -1,7 +1,8 @@
 // Portfolio_MaminiainaRafetraharivony.jsx
 import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FiMail, FiPhone, FiMapPin, FiDownload, FiLinkedin, FiBriefcase, FiBookOpen, FiZoomIn, FiX, FiCheckCircle } from 'react-icons/fi';
+// NOUVEAU : Ajout de FiMenu pour l'icône Hamburger du mobile
+import { FiMail, FiPhone, FiMapPin, FiDownload, FiLinkedin, FiBriefcase, FiBookOpen, FiZoomIn, FiX, FiCheckCircle, FiMenu } from 'react-icons/fi';
 
 // ---------- Données principales ----------
 const CV = {
@@ -10,7 +11,7 @@ const CV = {
   email: 'landry012345@gmail.com',
   phone: '0762687880',
   location: 'France',
-  linkedin: 'https://www.linkedin.com/in/maminiaina-landry-rafetraharivony-70214833b/', // <-- À REMPLIR
+  linkedin: 'https://www.linkedin.com/in/maminiaina-landry-rafetraharivony-70214833b/', 
   objective: "Passionné par les systèmes, réseaux et la cybersécurité. Je conçois, sécurise et administre des infrastructures informatiques modernes. Toujours en quête d'optimisation et d'automatisation.",
 };
 
@@ -124,11 +125,15 @@ function Section({ id, children }) {
 
 // ---------- Main component ----------
 export default function Portfolio() {
-  const [isZoomed, setIsZoomed] = useState(false); // Pour le tableau E4
+  const [isZoomed, setIsZoomed] = useState(false); 
+  // NOUVEAU : État pour le menu mobile
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const scrollTo = (id) => {
     const el = document.getElementById(id);
     if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    // NOUVEAU : Ferme le menu mobile automatiquement après un clic
+    setIsMobileMenuOpen(false);
   };
 
   return (
@@ -143,33 +148,67 @@ export default function Portfolio() {
             onClick={() => setIsZoomed(false)}
           >
             <button className="absolute top-6 right-6 text-white text-3xl hover:text-pink-400"><FiX /></button>
-            {/* L'image de ton tableau viendra ici */}
             <img src="apercu_e4.jpg" alt="Aperçu Tableau E4" className="max-w-full max-h-[90vh] object-contain rounded-lg border border-white/20 shadow-2xl" />
           </motion.div>
         )}
       </AnimatePresence>
 
-      {/* Navigation */}
+      {/* ---------- NOUVELLE BARRE DE NAVIGATION (RESPONSIVE) ---------- */}
       <nav className="fixed w-full z-40 top-2 sm:top-4 left-0 px-2 sm:px-6">
-        <div className="max-w-6xl mx-auto flex justify-between items-center py-2 backdrop-blur-md bg-black/30 rounded-xl px-2 sm:px-4 border border-white/10">
-          <div className="flex items-center gap-2 sm:gap-3">
-            <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-md bg-gradient-to-r from-indigo-700 to-pink-600 flex items-center justify-center font-bold text-white text-xs sm:text-base">MR</div>
-            <button onClick={() => scrollTo('hero')} className="hidden sm:block text-sm font-bold hover:text-indigo-300 transition-colors cursor-pointer">{CV.name}</button>
+        <div className="max-w-6xl mx-auto py-2 backdrop-blur-md bg-black/40 rounded-xl px-4 sm:px-6 border border-white/10 relative shadow-lg">
+          
+          <div className="flex justify-between items-center">
+            {/* Gauche : Logo et Nom */}
+            <div className="flex items-center gap-2 sm:gap-3">
+              <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-md bg-gradient-to-r from-indigo-700 to-pink-600 flex items-center justify-center font-bold text-white text-xs sm:text-base">MR</div>
+              <button onClick={() => scrollTo('hero')} className="hidden sm:block text-sm font-bold hover:text-indigo-300 transition-colors cursor-pointer">{CV.name}</button>
+            </div>
+
+            {/* Centre / Droite : Menu Ordinateur (Masqué sur mobile) */}
+            <div className="hidden md:flex gap-4 lg:gap-6">
+              <button onClick={() => scrollTo('parcours')} className="hover:text-indigo-300 text-sm font-medium transition-colors">Parcours</button>
+              <button onClick={() => scrollTo('Experience')} className="hover:text-indigo-300 text-sm font-medium transition-colors">Expérience</button>
+              <button onClick={() => scrollTo('projects')} className="hover:text-indigo-300 text-sm font-medium transition-colors">Projets</button>
+              <button onClick={() => scrollTo('tableau')} className="hover:text-indigo-300 text-sm font-medium transition-colors">Tableau E4</button>
+              <button onClick={() => scrollTo('veille')} className="hover:text-indigo-300 text-sm font-medium transition-colors">Veille</button>
+              <button onClick={() => scrollTo('contact')} className="hover:text-indigo-300 text-sm font-medium transition-colors">Contact</button>
+            </div>
+
+            {/* Droite : Bouton Menu Mobile (Hamburger) */}
+            <button 
+              className="md:hidden text-2xl text-white hover:text-indigo-300 transition-colors focus:outline-none"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            >
+              {isMobileMenuOpen ? <FiX /> : <FiMenu />}
+            </button>
           </div>
-          <div className="flex gap-1 sm:gap-2 md:gap-4 flex-wrap justify-end">
-            <button onClick={() => scrollTo('parcours')} className="hover:text-indigo-300 text-xs sm:text-sm px-1 sm:px-2">Parcours</button>
-            <button onClick={() => scrollTo('Experience')} className="hover:text-indigo-300 text-xs sm:text-sm px-1 sm:px-2 hidden sm:inline">Expérience</button>
-            <button onClick={() => scrollTo('projects')} className="hover:text-indigo-300 text-xs sm:text-sm px-1 sm:px-2">Projets</button>
-            <button onClick={() => scrollTo('tableau')} className="hover:text-indigo-300 text-xs sm:text-sm px-1 sm:px-2 hidden md:inline">Tableau E4</button>
-            <button onClick={() => scrollTo('veille')} className="hover:text-indigo-300 text-xs sm:text-sm px-1 sm:px-2 hidden lg:inline">Veille</button>
-            <button onClick={() => scrollTo('contact')} className="hover:text-indigo-300 text-xs sm:text-sm px-1 sm:px-2">Contact</button>
-          </div>
+
+          {/* Menu Déroulant Mobile (S'anime à l'ouverture) */}
+          <AnimatePresence>
+            {isMobileMenuOpen && (
+              <motion.div 
+                initial={{ opacity: 0, y: -10 }} 
+                animate={{ opacity: 1, y: 0 }} 
+                exit={{ opacity: 0, y: -10 }}
+                transition={{ duration: 0.2 }}
+                className="absolute top-full left-0 right-0 mt-2 bg-slate-900/95 backdrop-blur-xl border border-white/10 rounded-xl p-4 flex flex-col gap-4 shadow-2xl md:hidden"
+              >
+                <button onClick={() => scrollTo('parcours')} className="text-left text-white hover:text-indigo-300 font-medium">Parcours</button>
+                <button onClick={() => scrollTo('Experience')} className="text-left text-white hover:text-indigo-300 font-medium">Expérience</button>
+                <button onClick={() => scrollTo('projects')} className="text-left text-white hover:text-indigo-300 font-medium">Projets</button>
+                <button onClick={() => scrollTo('tableau')} className="text-left text-white hover:text-indigo-300 font-medium">Tableau E4</button>
+                <button onClick={() => scrollTo('veille')} className="text-left text-white hover:text-indigo-300 font-medium">Veille</button>
+                <button onClick={() => scrollTo('contact')} className="text-left text-white hover:text-indigo-300 font-medium">Contact</button>
+              </motion.div>
+            )}
+          </AnimatePresence>
+
         </div>
       </nav>
+      {/* ---------------------------------------------------------------- */}
 
       {/* Hero */}
       <header id="hero" className="min-h-screen flex items-center px-4 sm:px-6 lg:px-8 justify-center relative overflow-hidden">
-        {/* Effet visuel background */}
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-indigo-600/20 rounded-full blur-3xl mix-blend-screen pointer-events-none"></div>
         <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-pink-600/10 rounded-full blur-3xl mix-blend-screen pointer-events-none"></div>
 
@@ -256,7 +295,7 @@ export default function Portfolio() {
         <motion.div initial={{ opacity: 0, y: 15 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
           <h2 className="text-2xl sm:text-3xl font-bold mb-8 flex items-center gap-3"><FiBriefcase className="text-indigo-400" /> Expérience professionnelle</h2>
           
-          <div className="space-y-6"> {/* <-- Conteneur pour espacer les expériences */}
+          <div className="space-y-6"> 
             
             {/* --- EXPÉRIENCE 1 (ANATOM'S) --- */}
             <div className="bg-slate-800/40 p-6 sm:p-8 rounded-2xl border border-white/10 relative overflow-hidden">
@@ -338,13 +377,12 @@ export default function Portfolio() {
         </motion.div>
       </Section>
 
-      {/* ---------- Projets section (Segmentée) ---------- */}
+      {/* ---------- Projets section ---------- */}
       <Section id="projects">
         <motion.div initial={{ opacity: 0, y: 15 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
           <h2 className="text-2xl sm:text-3xl font-bold mb-2 flex items-center gap-3"><FiBookOpen className="text-pink-400" /> Documentations techniques</h2>
           <p className="text-gray-400 mb-8">Chronologie et détails de mes réalisations techniques.</p>
 
-          {/* Projets Entreprise */}
           <h3 className="text-xl font-bold text-indigo-300 mb-4 border-b border-indigo-900 pb-2">En milieu professionnel</h3>
           <div className="grid grid-cols-1 gap-4 mb-10">
             {proProjects.map((proj, idx) => (
@@ -367,7 +405,6 @@ export default function Portfolio() {
             ))}
           </div>
 
-          {/* Projets École */}
           <h3 className="text-xl font-bold text-pink-300 mb-4 border-b border-pink-900 pb-2">Projets de formation (Labo)</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {schoolProjects.map((proj, idx) => (
@@ -409,7 +446,6 @@ export default function Portfolio() {
           <h2 className="text-2xl sm:text-3xl font-bold mb-6">Tableau de synthèse E4</h2>
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center bg-slate-800/40 p-6 sm:p-8 rounded-2xl border border-white/10">
-            {/* Côté texte et compétences */}
             <div>
               <p className="text-gray-300 mb-4 text-justify">
                 Le tableau de synthèse regroupe l'ensemble des compétences acquises et mobilisées durant ma formation et mes expériences en entreprise. Il démontre ma capacité à gérer des infrastructures complexes de bout en bout.
@@ -429,14 +465,12 @@ export default function Portfolio() {
               </a>
             </div>
 
-            {/* Côté Visuel / Zoom */}
             <div className="relative group cursor-pointer" onClick={() => setIsZoomed(true)}>
               <div className="absolute inset-0 bg-indigo-500/20 group-hover:bg-transparent transition-colors rounded-xl z-10 flex items-center justify-center">
                 <div className="bg-black/80 text-white px-4 py-2 rounded-full flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity transform group-hover:scale-110">
                   <FiZoomIn /> Agrandir l'aperçu
                 </div>
               </div>
-              {/* IMAGE A CHANGER PAR LA TIENNE PLUS TARD */}
               <div className="w-full aspect-[4/3] bg-slate-700 rounded-xl border-2 border-dashed border-slate-500 flex flex-col items-center justify-center overflow-hidden relative">
                 <img src="./apercu_e4.jpg" alt="Aperçu indisponible" className="object-cover opacity-30 w-full h-full" onError={(e) => e.target.style.display='none'} />
                 <div className="absolute flex flex-col items-center text-slate-400">
@@ -449,14 +483,13 @@ export default function Portfolio() {
         </motion.div>
       </Section>
       
-      {/* ---------- Veille Technologique (Enrichie) ---------- */}
+      {/* ---------- Veille Technologique ---------- */}
       <Section id="veille">
         <motion.div initial={{ opacity: 0, y: 15 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
           <h2 className="text-2xl sm:text-3xl font-bold mb-2">Veille Technologique</h2>
           <p className="text-gray-400 mb-8">L'innovation au service des systèmes d'information.</p>
           
           <div className="space-y-8">
-            {/* Bloc 1 : Méthodologie */}
             <div className="bg-gradient-to-r from-slate-800/80 to-indigo-900/20 p-6 sm:p-8 rounded-2xl border border-indigo-500/20">
               <h3 className="text-xl font-bold text-white mb-4">Ma démarche et mes outils</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -476,7 +509,6 @@ export default function Portfolio() {
               </div>
             </div>
 
-            {/* Bloc 2 : Sujet principal */}
             <div className="bg-slate-800/40 p-6 sm:p-8 rounded-2xl border border-white/10">
               <div className="flex flex-col lg:flex-row gap-8">
                 <div className="flex-1">
@@ -504,7 +536,6 @@ export default function Portfolio() {
                     </div>
                   </div>
 
-                  {/* Sources formatées proprement */}
                   <div className="bg-black/20 p-4 rounded-lg">
                     <h4 className="font-semibold text-sm mb-2 text-white">Sources étudiées :</h4>
                     <ul className="space-y-2 text-xs text-gray-400">
@@ -515,10 +546,8 @@ export default function Portfolio() {
                   </div>
                 </div>
 
-                {/* Visuel illustratif */}
                 <div className="lg:w-1/3 flex items-center justify-center">
                   <div className="relative w-full aspect-square rounded-2xl overflow-hidden shadow-2xl shadow-indigo-500/20 group">
-                    {/* Placeholder d'image stylisé */}
                     <div className="absolute inset-0 bg-gradient-to-br from-indigo-900 to-slate-900 flex flex-col items-center justify-center p-6 text-center">
                       <div className="text-6xl mb-4 opacity-50">👓</div>
                       <div className="text-indigo-300 font-bold tracking-widest uppercase text-sm">Smart Glasses & AI</div>
