@@ -462,7 +462,7 @@ export default function Portfolio() {
               </ul>
 
               <a href="Tableau de synthese E4.pdf" download className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white text-indigo-950 font-bold shadow-lg hover:bg-indigo-50 hover:scale-105 transition-all duration-300">
-                <FiDownload /> Télécharger le PDF officiel
+                <FiDownload /> Télécharger la Fiche E4
               </a>
             </div>
 
