@@ -19,7 +19,7 @@ const CV = {
 const proProjects = [
   {
     title: "Gestion de parc sous GLPI",
-    date: "Mai 2025",
+    date: "Fevrier 2026",
     icon: "🏢",
     context: "Optimisation de la gestion des tickets et de l'inventaire matériel.",
     interest: "Centraliser les demandes d'assistance, réduire le temps de résolution et automatiser l'inventaire via des agents.",
