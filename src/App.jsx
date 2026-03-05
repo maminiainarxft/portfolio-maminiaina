@@ -193,6 +193,7 @@ export default function Portfolio() {
                 transition={{ duration: 0.2 }}
                 className="absolute top-full left-0 right-0 mt-2 bg-slate-900/95 backdrop-blur-xl border border-white/10 rounded-xl p-4 flex flex-col gap-4 shadow-2xl md:hidden"
               >
+                <button onClick={() => scrollTo('hero')} className="text-left text-white hover:text-indigo-300 font-medium">{CV.name}</button>
                 <button onClick={() => scrollTo('parcours')} className="text-left text-white hover:text-indigo-300 font-medium">Parcours</button>
                 <button onClick={() => scrollTo('Experience')} className="text-left text-white hover:text-indigo-300 font-medium">Expérience</button>
                 <button onClick={() => scrollTo('projects')} className="text-left text-white hover:text-indigo-300 font-medium">Projets</button>
