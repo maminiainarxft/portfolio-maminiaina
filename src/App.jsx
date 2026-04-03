@@ -249,7 +249,7 @@ export default function Portfolio() {
               <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-slate-800/40 p-6 rounded-xl border border-white/10 hover:border-pink-500/50 transition-colors">
                 <h3 className="font-bold text-lg text-pink-300">Baccalauréat Général</h3>
                 <p className="text-sm text-gray-300 mt-1">
-                  Lycée général et technologique Descartes
+                  Spécialité : Numérique et Sciences Informatiques (NSI) - Mathematiques.
                 </p>
                 <p className="text-xs text-gray-400 mt-2 flex items-center gap-1">
                   <FiMapPin /> Antony, France
