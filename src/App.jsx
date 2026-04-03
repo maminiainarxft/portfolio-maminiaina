@@ -208,7 +208,7 @@ export default function Portfolio() {
 
           <div className="mt-6 mb-8 flex flex-wrap gap-4 items-center">
             <a 
-              href="CV_MaminiainaRafetraharivonyv1.pdf" download="CV_MaminiainaRafetraharivony.pdf" 
+              href="RAFETRAHARIVONY-Maminiaina-Landry.pdf" download="RAFETRAHARIVONY-Maminiaina-Landry.pdf" 
               className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white text-indigo-950 font-bold shadow-lg hover:bg-indigo-50 hover:scale-105 transition-all duration-300"
             > 
               <FiDownload className="text-xl" /> Télécharger mon CV
