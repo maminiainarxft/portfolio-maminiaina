@@ -479,9 +479,9 @@ export default function Portfolio() {
             <div className="bg-slate-800/40 p-6 sm:p-8 rounded-2xl border border-white/10">
               <div className="flex flex-col lg:flex-row gap-8">
                 <div className="flex-1">
-                  <h3 className="text-2xl font-bold text-pink-300 mb-4">Sujet d'étude : Des lunettes en tant que téléphone</h3>
+                  <h3 className="text-2xl font-bold text-pink-300 mb-4">Sujet d'étude : Des lunettes en tant que téléphone avec l'IA</h3>
                   <p className="text-sm sm:text-base text-gray-300 text-justify mb-6">
-                    L'intégration de l'Intelligence Artificielle directement dans des lunettes connectées (Smart Glasses) transforme la façon dont nous interagissons avec la technologie. Ce qui relevait de la science-fiction devient une réalité matérielle.
+                    L'intégration de l'Intelligence Artificielle directement dans des lunettes connectées (Smart Glasses) pour en faire un téléphone transforme la façon dont nous interagissons avec la technologie. Ce qui relevait de la science-fiction devient une réalité matérielle.
                   </p>
                   
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
