@@ -1,7 +1,6 @@
 // Portfolio_MaminiainaRafetraharivony.jsx
 import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-// NOUVEAU : Ajout de FiMenu pour l'icône Hamburger du mobile
 import { FiMail, FiPhone, FiMapPin, FiDownload, FiLinkedin, FiBriefcase, FiBookOpen, FiZoomIn, FiX, FiCheckCircle, FiMenu } from 'react-icons/fi';
 
 // ---------- Données principales ----------
@@ -19,9 +18,9 @@ const CV = {
 const proProjects = [
   {
     title: "Gestion de parc sous GLPI",
-    date: "Fevrier 2026",
+    date: "Mai 2025",
     icon: "🏢",
-    context: "Optimisation de la gestion des tickets et de l'inventaire matériel.",
+    context: "Optimisation de la gestion des tickets et de l'inventaire matériel dans le cadre de mon stage chez METRO.",
     interest: "Centraliser les demandes d'assistance, réduire le temps de résolution et automatiser l'inventaire via des agents.",
     file: "Documentation GLPI.pdf"
   }
@@ -126,13 +125,11 @@ function Section({ id, children }) {
 // ---------- Main component ----------
 export default function Portfolio() {
   const [isZoomed, setIsZoomed] = useState(false); 
-  // NOUVEAU : État pour le menu mobile
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const scrollTo = (id) => {
     const el = document.getElementById(id);
     if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    // NOUVEAU : Ferme le menu mobile automatiquement après un clic
     setIsMobileMenuOpen(false);
   };
 
@@ -158,13 +155,11 @@ export default function Portfolio() {
         <div className="max-w-6xl mx-auto py-2 backdrop-blur-md bg-black/40 rounded-xl px-4 sm:px-6 border border-white/10 relative shadow-lg">
           
           <div className="flex justify-between items-center">
-            {/* Gauche : Logo et Nom */}
             <div className="flex items-center gap-2 sm:gap-3">
               <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-md bg-gradient-to-r from-indigo-700 to-pink-600 flex items-center justify-center font-bold text-white text-xs sm:text-base">MR</div>
               <button onClick={() => scrollTo('hero')} className="hidden sm:block text-sm font-bold hover:text-indigo-300 transition-colors cursor-pointer">{CV.name}</button>
             </div>
 
-            {/* Centre / Droite : Menu Ordinateur (Masqué sur mobile) */}
             <div className="hidden md:flex gap-4 lg:gap-6">
               <button onClick={() => scrollTo('parcours')} className="hover:text-indigo-300 text-sm font-medium transition-colors">Parcours</button>
               <button onClick={() => scrollTo('Experience')} className="hover:text-indigo-300 text-sm font-medium transition-colors">Expérience</button>
@@ -174,7 +169,6 @@ export default function Portfolio() {
               <button onClick={() => scrollTo('contact')} className="hover:text-indigo-300 text-sm font-medium transition-colors">Contact</button>
             </div>
 
-            {/* Droite : Bouton Menu Mobile (Hamburger) */}
             <button 
               className="md:hidden text-2xl text-white hover:text-indigo-300 transition-colors focus:outline-none"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -183,7 +177,6 @@ export default function Portfolio() {
             </button>
           </div>
 
-          {/* Menu Déroulant Mobile (S'anime à l'ouverture) */}
           <AnimatePresence>
             {isMobileMenuOpen && (
               <motion.div 
@@ -193,7 +186,6 @@ export default function Portfolio() {
                 transition={{ duration: 0.2 }}
                 className="absolute top-full left-0 right-0 mt-2 bg-slate-900/95 backdrop-blur-xl border border-white/10 rounded-xl p-4 flex flex-col gap-4 shadow-2xl md:hidden"
               >
-                <button onClick={() => scrollTo('hero')} className="text-left text-white hover:text-indigo-300 font-medium">{CV.name}</button>
                 <button onClick={() => scrollTo('parcours')} className="text-left text-white hover:text-indigo-300 font-medium">Parcours</button>
                 <button onClick={() => scrollTo('Experience')} className="text-left text-white hover:text-indigo-300 font-medium">Expérience</button>
                 <button onClick={() => scrollTo('projects')} className="text-left text-white hover:text-indigo-300 font-medium">Projets</button>
@@ -252,7 +244,23 @@ export default function Portfolio() {
 
           <div className="space-y-6 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-indigo-500 before:to-pink-500">
             
-            {/* 1. BTS SIO SISR */}
+            {/* 1. Baccalauréat (INVERSÉ : Maintenant en premier) */}
+            <div className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+              <div className="flex items-center justify-center w-10 h-10 rounded-full border-4 border-gray-900 bg-pink-500 text-white shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">
+                <FiCheckCircle className="text-sm" />
+              </div>
+              <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-slate-800/40 p-6 rounded-xl border border-white/10 hover:border-pink-500/50 transition-colors">
+                <h3 className="font-bold text-lg text-pink-300">Baccalauréat Général</h3>
+                <p className="text-sm text-gray-300 mt-1">
+                  Lycée général et technologique Descartes
+                </p>
+                <p className="text-xs text-gray-400 mt-2 flex items-center gap-1">
+                  <FiMapPin /> Antony, France
+                </p>
+              </div>
+            </div>
+
+            {/* 2. BTS SIO SISR (INVERSÉ : Maintenant en second) */}
             <div className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
               <div className="flex items-center justify-center w-10 h-10 rounded-full border-4 border-gray-900 bg-indigo-500 text-white shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">
                 <FiBookOpen className="text-sm" />
@@ -268,22 +276,6 @@ export default function Portfolio() {
                   <p><strong className="text-pink-300">Objectif :</strong> Former des informaticiens capables d'administrer, sécuriser et maintenir des réseaux informatiques.</p>
                   <p><strong className="text-pink-300">Métiers visés :</strong> Technicien support, Administrateur systèmes et réseaux, Ingénieur réseau junior.</p>
                 </div>
-              </div>
-            </div>
-
-            {/* 2. Baccalauréat */}
-            <div className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
-              <div className="flex items-center justify-center w-10 h-10 rounded-full border-4 border-gray-900 bg-pink-500 text-white shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">
-                <FiCheckCircle className="text-sm" />
-              </div>
-              <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-slate-800/40 p-6 rounded-xl border border-white/10 hover:border-pink-500/50 transition-colors">
-                <h3 className="font-bold text-lg text-pink-300">Baccalauréat Général</h3>
-                <p className="text-sm text-gray-300 mt-1">
-                  Lycée général et technologique Descartes
-                </p>
-                <p className="text-xs text-gray-400 mt-2 flex items-center gap-1">
-                  <FiMapPin /> Antony, France
-                </p>
               </div>
             </div>
 
@@ -462,7 +454,7 @@ export default function Portfolio() {
               </ul>
 
               <a href="Tableau de synthese E4.pdf" download className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white text-indigo-950 font-bold shadow-lg hover:bg-indigo-50 hover:scale-105 transition-all duration-300">
-                <FiDownload /> Télécharger la Fiche E4
+                <FiDownload /> Télécharger le PDF officiel
               </a>
             </div>
 
