@@ -20,7 +20,7 @@ const proProjects = [
     title: "Gestion de parc sous GLPI",
     date: "Mai 2025",
     icon: "🏢",
-    context: "Optimisation de la gestion des tickets et de l'inventaire matériel dans le cadre de mon stage chez METRO.",
+    context: "Optimisation de la gestion des tickets et de l'inventaire matériel.",
     interest: "Centraliser les demandes d'assistance, réduire le temps de résolution et automatiser l'inventaire via des agents.",
     file: "Documentation GLPI.pdf"
   }
