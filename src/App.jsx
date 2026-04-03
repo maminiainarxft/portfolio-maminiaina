@@ -302,7 +302,7 @@ export default function Portfolio() {
               <div className="mb-6">
                 <p className="text-sm text-gray-300 bg-black/20 p-4 rounded-lg border border-white/5 italic">
                   <span className="font-semibold text-white not-italic">Contexte : </span> 
-                  ANATOM'S est une association qui distribue de la nourriture aux personnes dans le besoin. En tant que technicien support, j'ai assuré la maintenance du parc informatique, la gestion des incidents et la formation des utilisateurs sur les outils de gestion interne, contribuant ainsi à l'efficacité opérationnelle de l'association.
+                  ANATOM'S est une association qui distribue de la nourriture aux personnes dans le besoin. En tant que technicien support, j'ai assuré la maintenance du parc informatique, la gestion des incidents contribuant ainsi à l'efficacité opérationnelle de l'association.
                 </p>
               </div>
 
@@ -311,11 +311,11 @@ export default function Portfolio() {
                 <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
                   <li className="flex gap-2 items-start text-sm text-gray-300">
                     <FiCheckCircle className="text-pink-400 mt-1 shrink-0" />
-                    <span><strong>Support N1 :</strong> Résolution d'incidents utilisateurs via la gestion de tickets</span>
+                    <span><strong>Support N1 :</strong> Résolution d'incidents utilisateurs</span>
                   </li>
                   <li className="flex gap-2 items-start text-sm text-gray-300">
                     <FiCheckCircle className="text-pink-400 mt-1 shrink-0" />
-                    <span><strong>Masterisation :</strong> Préparation et déploiement logiciel automatisé de nouveaux postes.</span>
+                    <span><strong>Masterisation :</strong> Préparation et déploiement logiciel de nouveaux postes.</span>
                   </li>
                 </ul>
               </div>
