@@ -462,15 +462,14 @@ export default function Portfolio() {
               <h3 className="text-xl font-bold text-white mb-4">Ma démarche et mes outils</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <p className="text-sm text-gray-300 text-justify">
-                  L'informatique étant un secteur en constante évolution, une veille active est indispensable. Je consacre environ 2 heures par semaine à m'informer sur les nouvelles failles de sécurité, les évolutions matérielles et les innovations IA. <br/><br/>
-                  <strong>Impact pro :</strong> Cela me permet d'anticiper l'obsolescence, de proposer des outils plus performants (comme l'intégration de scripts IA pour l'automatisation) et d'appliquer les derniers patchs de sécurité rapidement.
+                  L'informatique étant un secteur en constante évolution, une veille active est indispensable. Je dois m'informer sur les nouvelles failles de sécurité, les évolutions matérielles et les innovations IA. <br/><br/>
+                  <strong>Impact pro :</strong> Cela me permet d'anticiper l'obsolescence, de proposer des outils plus performants et d'appliquer les derniers patchs de sécurité rapidement.
                 </p>
                 <div className="bg-black/30 p-4 rounded-xl border border-white/5 h-fit">
                   <p className="font-semibold text-indigo-300 mb-2 text-sm">Sources d'informations quotidiennes :</p>
                   <ul className="space-y-2 text-sm text-gray-300">
-                    <li>• Agrégateurs de flux RSS (Feedly)</li>
                     <li>• Réseaux sociaux professionnels (LinkedIn, X)</li>
-                    <li>• Médias spécialisés (BleepingComputer, Frandroid, ZDNet)</li>
+                    <li>• Médias spécialisés (Frandroid)</li>
                     <li>• Chaînes techniques YouTube</li>
                   </ul>
                 </div>
@@ -482,7 +481,7 @@ export default function Portfolio() {
                 <div className="flex-1">
                   <h3 className="text-2xl font-bold text-pink-300 mb-4">Sujet d'étude : Les lunettes IA, vers le mythe d'Iron Man ?</h3>
                   <p className="text-sm sm:text-base text-gray-300 text-justify mb-6">
-                    L'intégration de l'Intelligence Artificielle générative directement dans des lunettes connectées (Smart Glasses) transforme la façon dont nous interagissons avec la technologie. Ce qui relevait de la science-fiction devient une réalité matérielle.
+                    L'intégration de l'Intelligence Artificielle directement dans des lunettes connectées (Smart Glasses) transforme la façon dont nous interagissons avec la technologie. Ce qui relevait de la science-fiction devient une réalité matérielle.
                   </p>
                   
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
@@ -510,6 +509,7 @@ export default function Portfolio() {
                       <li>🔗 <a href="https://www.youtube.com/watch?v=WW-P3limYc0" target="_blank" rel="noreferrer" className="hover:text-indigo-400 transition-colors">Test des Meta Ray-Ban AI : La révolution invisible (Léo Duff - YouTube)</a></li>
                       <li>🔗 <a href="https://www.youtube.com/watch?v=YHap1eSs7cg&pp=ygUKbHVuZXR0ZSBJQQ%3D%3D" target="_blank" rel="noreferrer" className="hover:text-indigo-400 transition-colors">L'avenir des lunettes connectées : Bilan 2024 (Frandroid)</a></li>
                       <li>🔗 <a href="https://www.realite-virtuelle.com/surface-keyboard-le-meta-quest-3-devient-soudain-beaucoup-plus-tentant/" target="_blank" rel="noreferrer" className="hover:text-indigo-400 transition-colors">Réalité mixte et productivité : l'écosystème Meta (Realite-virtuelle.com)</a></li>
+                      <li>🔗 <a href="https://www.google.com/url?rct=j&sa=t&url=https://www.sudinfo.be/id1100977/article/2026-01-28/viture-des-lunettes-virtuelles-portables-appelees-devenir-une-alternative-aux&ct=ga&cd=CAEYAyoTNzg1MzA1OTQ2ODMyMjEyMTM0NDIZMTYzNjRlYjAzYzM2NjYzMTpmcjpmcjpGUg&usg=AOvVaw2M0PUYlWeHDJ3ab287o7G9" target="_blank" rel="noreferrer" className="hover:text-indigo-400 transition-colors">Viture, une alternative aux écrans habituelles</a></li>
                     </ul>
                   </div>
                 </div>
