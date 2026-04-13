@@ -488,50 +488,60 @@ export default function Portfolio() {
       <Section id="veille">
         <motion.div initial={{ opacity: 0, y: 15 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
           <h2 className="text-2xl sm:text-3xl font-bold mb-2">Veille Technologique</h2>
-          <p className="text-gray-400 mb-8">L'innovation au service des systèmes d'information.</p>
+          <p className="text-gray-400 mb-8">L'innovation au service des systèmes d'information et de l'utilisateur.</p>
           
           <div className="space-y-8">
+            {/* Démarche et outils */}
             <div className="bg-gradient-to-r from-slate-800/80 to-indigo-900/20 p-6 sm:p-8 rounded-2xl border border-indigo-500/20">
               <h3 className="text-xl font-bold text-white mb-4">Ma démarche et mes outils</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <p className="text-sm text-gray-300 text-justify">
                   L'informatique étant un secteur en constante évolution, une veille active est indispensable. Je dois m'informer sur les nouvelles failles de sécurité, les évolutions matérielles et les innovations IA. <br/><br/>
-                  <strong>Impact pro :</strong> Cela me permet d'anticiper l'obsolescence, de proposer des outils plus performants et d'appliquer les derniers patchs de sécurité rapidement.
+                  <strong>Impact pro :</strong> Cela me permet d'anticiper l'obsolescence, de proposer des outils plus performants et de comprendre l'acceptabilité des nouvelles technologies par les utilisateurs.
                 </p>
                 <div className="bg-black/30 p-4 rounded-xl border border-white/5 h-fit">
                   <p className="font-semibold text-indigo-300 mb-2 text-sm">Sources d'informations quotidiennes :</p>
                   <ul className="space-y-2 text-sm text-gray-300">
                     <li>• Réseaux sociaux professionnels (LinkedIn, X)</li>
-                    <li>• Médias spécialisés (Frandroid)</li>
-                    <li>• Chaînes techniques YouTube</li>
+                    <li>• Médias spécialisés (Numerama, Frandroid, The Verge)</li>
+                    <li>• Chaînes techniques YouTube (Léo Duff, Marques Brownlee)</li>
                   </ul>
                 </div>
               </div>
             </div>
 
+            {/* Sujet d'étude principal */}
             <div className="bg-slate-800/40 p-6 sm:p-8 rounded-2xl border border-white/10">
               <div className="flex flex-col lg:flex-row gap-8">
                 <div className="flex-1">
-                  <h3 className="text-2xl font-bold text-pink-300 mb-4">Sujet d'étude : Des lunettes en tant que téléphone avec l'IA</h3>
+                  <h3 className="text-2xl font-bold text-pink-300 mb-4">Sujet d'étude : Smart Glasses, de l'échec de Google au triomphe de Meta</h3>
                   <p className="text-sm sm:text-base text-gray-300 text-justify mb-6">
-                    L'intégration de l'Intelligence Artificielle directement dans des lunettes connectées (Smart Glasses) pour en faire un téléphone transforme la façon dont nous interagissons avec la technologie. Ce qui relevait de la science-fiction devient une réalité matérielle.
+                    Pourquoi les Google Glass, lancées avec grand bruit il y a 10 ans, ont-elles été un fiasco commercial, là où les lunettes Meta Ray-Ban rencontrent aujourd'hui un succès retentissant ? Cette étude analyse la transition d'un gadget "techno-centré" à un véritable accessoire de mode propulsé par l'IA.
                   </p>
                   
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
+                    {/* Google Glass */}
                     <div>
-                      <h4 className="font-semibold text-indigo-300 mb-2 border-b border-white/10 pb-1">Avancées majeures</h4>
-                      <ul className="list-disc list-inside space-y-1 text-sm text-gray-300">
-                         <li><span className="font-semibold text-white">IA embarquée :</span> Meta Ray-Ban (Llama 3), intégration multimodale (voix + vision).</li>
-                         <li><span className="font-semibold text-white">Puces dédiées :</span> Snapdragon AR1 Gen 1 pour un traitement local ultra-rapide.</li>
-                         <li><span className="font-semibold text-white">Usages pro :</span> Assistance technique à distance en réalité augmentée.</li>
+                      <h4 className="font-semibold text-indigo-300 mb-2 border-b border-white/10 pb-1 flex items-center gap-2">
+                        <span>2013 : Le fiasco Google Glass</span>
+                      </h4>
+                      <ul className="list-disc list-inside space-y-2 text-sm text-gray-300">
+                        <li><span className="font-semibold text-white">Prix exorbitant :</span> Lancées à <strong>1 500 $</strong> (Édition Explorer), inaccessibles au grand public.</li>
+                        <li><span className="font-semibold text-white">Acceptation sociale :</span> Design cyborg stigmatisant. Apparition du terme péjoratif <em>"Glasshole"</em>.</li>
+                        <li><span className="font-semibold text-white">Vie privée :</span> Caméra très discrète créant la paranoïa (bannies des cinémas et bars).</li>
+                        <li><span className="font-semibold text-white">Technologie :</span> Écran HUD intrusif dans le champ de vision, provoquant des maux de tête.</li>
                       </ul>
                     </div>
+                    {/* Meta Ray-Ban */}
                     <div>
-                      <h4 className="font-semibold text-pink-300 mb-2 border-b border-white/10 pb-1">Défis et Freins</h4>
-                      <ul className="list-disc list-inside space-y-1 text-sm text-gray-300">
-                        <li>Miniaturisation et dissipation thermique.</li>
-                        <li>Autonomie de la batterie souvent limitée (3-4h).</li>
-                        <li><strong>Cybersécurité :</strong> Risques liés à la vie privée et à l'enregistrement vidéo discret.</li>
+                      <h4 className="font-semibold text-pink-300 mb-2 border-b border-white/10 pb-1 flex items-center gap-2">
+                        <span>2023 : La recette Meta Ray-Ban</span>
+                      </h4>
+                      <ul className="list-disc list-inside space-y-2 text-sm text-gray-300">
+                        <li><span className="font-semibold text-white">Accessibilité :</span> Prix de lancement attractif à <strong>329 €</strong>.</li>
+                        <li><span className="font-semibold text-white">Design invisible :</span> Partenariat avec le géant <strong>Luxottica</strong>. Elles ressemblent à de vraies Ray-Ban (Wayfarer).</li>
+                        <li><span className="font-semibold text-white">Privacy-by-design :</span> LED frontale ultra-lumineuse et impossible à masquer lors de l'enregistrement.</li>
+                        <li><span className="font-semibold text-white">Succès & IA :</span> Plus d'<strong>1 million de ventes</strong> en quelques mois. Succès poussé par l'IA vocale (Llama 3) au lieu de la réalité augmentée visuelle.</li>
                       </ul>
                     </div>
                   </div>
@@ -539,20 +549,25 @@ export default function Portfolio() {
                   <div className="bg-black/20 p-4 rounded-lg">
                     <h4 className="font-semibold text-sm mb-2 text-white">Sources étudiées :</h4>
                     <ul className="space-y-2 text-xs text-gray-400">
+                      <li>🔗 <a href="https://www.numerama.com/tech/1317540-pourquoi-les-google-glass-ont-echoue.html" target="_blank" rel="noreferrer" className="hover:text-indigo-400 transition-colors">Pourquoi les Google Glass ont échoué : l'histoire d'un produit trop en avance (Numerama)</a></li>
                       <li>🔗 <a href="https://www.youtube.com/watch?v=WW-P3limYc0" target="_blank" rel="noreferrer" className="hover:text-indigo-400 transition-colors">Test des Meta Ray-Ban AI : La révolution invisible (Léo Duff - YouTube)</a></li>
-                      <li>🔗 <a href="https://www.youtube.com/watch?v=YHap1eSs7cg&pp=ygUKbHVuZXR0ZSBJQQ%3D%3D" target="_blank" rel="noreferrer" className="hover:text-indigo-400 transition-colors">L'avenir des lunettes connectées : Bilan 2024 (Frandroid)</a></li>
-                      <li>🔗 <a href="https://www.realite-virtuelle.com/surface-keyboard-le-meta-quest-3-devient-soudain-beaucoup-plus-tentant/" target="_blank" rel="noreferrer" className="hover:text-indigo-400 transition-colors">Réalité mixte et productivité : l'écosystème Meta (Realite-virtuelle.com)</a></li>
-                      <li>🔗 <a href="https://www.google.com/url?rct=j&sa=t&url=https://www.sudinfo.be/id1100977/article/2026-01-28/viture-des-lunettes-virtuelles-portables-appelees-devenir-une-alternative-aux&ct=ga&cd=CAEYAyoTNzg1MzA1OTQ2ODMyMjEyMTM0NDIZMTYzNjRlYjAzYzM2NjYzMTpmcjpmcjpGUg&usg=AOvVaw2M0PUYlWeHDJ3ab287o7G9" target="_blank" rel="noreferrer" className="hover:text-indigo-400 transition-colors">Viture, une alternative aux écrans habituelles</a></li>
+                      <li>🔗 <a href="https://fr.statista.com/infographie/31802/ventes-lunettes-connectees-smart-glasses-meta-ray-ban/" target="_blank" rel="noreferrer" className="hover:text-indigo-400 transition-colors">Le marché des lunettes connectées explose grâce à Meta (Statista, 2024)</a></li>
+                      <li>🔗 <a href="https://www.frandroid.com/produits-meta/1966200_meta-ray-ban-test-avis" target="_blank" rel="noreferrer" className="hover:text-indigo-400 transition-colors">Test des lunettes Meta x Ray-Ban : L'IA au bout du nez (Frandroid)</a></li>
                     </ul>
                   </div>
                 </div>
 
                 <div className="lg:w-1/3 flex items-center justify-center">
                   <div className="relative w-full aspect-square rounded-2xl overflow-hidden shadow-2xl shadow-indigo-500/20 group">
-                    <div className="absolute inset-0 bg-gradient-to-br from-indigo-900 to-slate-900 flex flex-col items-center justify-center p-6 text-center">
-                      <div className="text-6xl mb-4 opacity-50">👓</div>
-                      <div className="text-indigo-300 font-bold tracking-widest uppercase text-sm">Smart Glasses & AI</div>
-                      <div className="w-16 h-1 bg-pink-500 mt-4 rounded-full"></div>
+                    <div className="absolute inset-0 bg-gradient-to-br from-slate-900 to-indigo-950 flex flex-col items-center justify-center p-6 text-center border border-white/5">
+                      <div className="flex items-center justify-center gap-4 mb-4">
+                        <div className="text-5xl opacity-30 line-through">👓</div>
+                        <div className="text-2xl text-pink-500 opacity-80">➔</div>
+                        <div className="text-5xl drop-shadow-[0_0_15px_rgba(236,72,153,0.8)]">🕶️</div>
+                      </div>
+                      <div className="text-indigo-200 font-bold tracking-wider uppercase text-sm">Design vs Tech</div>
+                      <div className="text-xs text-gray-400 mt-2 font-mono">2013 ➔ 2024</div>
+                      <div className="w-16 h-1 bg-gradient-to-r from-indigo-500 to-pink-500 mt-4 rounded-full"></div>
                     </div>
                   </div>
                 </div>
