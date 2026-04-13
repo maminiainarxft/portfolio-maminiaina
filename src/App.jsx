@@ -452,32 +452,35 @@ export default function Portfolio() {
         <motion.div initial={{ opacity: 0, y: 15 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
           <h2 className="text-2xl sm:text-3xl font-bold mb-6">Tableau de synthèse E4</h2>
           
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center bg-slate-800/40 p-6 sm:p-8 rounded-2xl border border-white/10">
-            <div>
-              <p className="text-gray-300 mb-4 text-justify">
-                Le tableau de synthèse regroupe l'ensemble des compétences acquises et mobilisées durant ma formation et mes expériences en entreprise. Il démontre ma capacité à gérer des infrastructures complexes de bout en bout.
-              </p>
-              
-              <h3 className="font-bold text-indigo-300 mb-3">Compétences clés développées :</h3>
-              <ul className="space-y-2 mb-6">
-                <li className="flex items-center gap-2 text-sm text-gray-300"><FiCheckCircle className="text-green-400" /> Gérer le patrimoine informatique (Déploiement, Inventaire)</li>
-                <li className="flex items-center gap-2 text-sm text-gray-300"><FiCheckCircle className="text-green-400" /> Répondre aux incidents et aux demandes d'assistance</li>
-                <li className="flex items-center gap-2 text-sm text-gray-300"><FiCheckCircle className="text-green-400" /> Développer la présence en ligne de l'organisation</li>
-                <li className="flex items-center gap-2 text-sm text-gray-300"><FiCheckCircle className="text-green-400" /> Travailler en mode projet (Planification, Documentation)</li>
-                <li className="flex items-center gap-2 text-sm text-gray-300"><FiCheckCircle className="text-green-400" /> Sécuriser les équipements et les usages</li>
-              </ul>
+          {/* Suppression du grid-cols-2 pour laisser le texte respirer sur toute la largeur */}
+          <div className="bg-slate-800/40 p-6 sm:p-8 rounded-2xl border border-white/10">
+            
+            <p className="text-gray-300 mb-6 text-justify">
+              Le tableau de synthèse regroupe l'ensemble des compétences acquises et mobilisées durant ma formation et mes expériences en entreprise. Il démontre ma capacité à gérer des infrastructures complexes de bout en bout.
+            </p>
+            
+            <h3 className="font-bold text-indigo-300 mb-4">Compétences clés développées :</h3>
+            <ul className="space-y-3 mb-8">
+              <li className="flex items-center gap-2 text-sm text-gray-300"><FiCheckCircle className="text-green-400" /> Gérer le patrimoine informatique (Déploiement, Inventaire)</li>
+              <li className="flex items-center gap-2 text-sm text-gray-300"><FiCheckCircle className="text-green-400" /> Répondre aux incidents et aux demandes d'assistance</li>
+              <li className="flex items-center gap-2 text-sm text-gray-300"><FiCheckCircle className="text-green-400" /> Développer la présence en ligne de l'organisation</li>
+              <li className="flex items-center gap-2 text-sm text-gray-300"><FiCheckCircle className="text-green-400" /> Travailler en mode projet (Planification, Documentation)</li>
+              <li className="flex items-center gap-2 text-sm text-gray-300"><FiCheckCircle className="text-green-400" /> Sécuriser les équipements et les usages</li>
+            </ul>
 
+            {/* Conteneur Flex pour regrouper les boutons proprement */}
+            <div className="flex flex-wrap items-center gap-4">
               <a href="Tableau de synthese E4.pdf" download className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white text-indigo-950 font-bold shadow-lg hover:bg-indigo-50 hover:scale-105 transition-all duration-300">
-                <FiDownload /> Télécharger le PDF officiel
+                <FiDownload className="text-lg" /> Télécharger le PDF officiel
               </a>
-            </div>
 
-            {/* Bouton pour ouvrir l'aperçu du tableau E4 */}
               <button 
                 onClick={() => setZoomedImage('Tableau de synthese E4.png')}
-                className="ml-6 inline-flex items-center gap-1.5 text-xs bg-pink-600/20 hover:bg-pink-600/40 text-pink-200 px-2.5 py-1.5 rounded-md transition-colors border border-pink-500/30 w-fit">
-                <FiZoomIn /> Voir aperçu Tableau E4
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-pink-600/20 hover:bg-pink-600/40 text-pink-200 border border-pink-500/30 transition-all duration-300 font-medium">
+                <FiZoomIn className="text-lg" /> Voir aperçu Tableau E4
               </button>
+            </div>
+
           </div>
         </motion.div>
       </Section>
