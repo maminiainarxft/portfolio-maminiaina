@@ -131,18 +131,19 @@ export default function Portfolio() {
 
   return (
     <div className="min-h-screen bg-gray-900 text-gray-200 antialiased">
+      
       {/* Fenêtre modale pour le zoom du tableau */}
       <AnimatePresence>
         {zoomedImage && (
-          <motion.div 
-            initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
-            className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-4"
-            onClick={() => setZoomedImage(null)}
-          >
+        <motion.div 
+          initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-4"
+          onClick={() => setZoomedImage(null)}
+        >
         <button className="absolute top-6 right-6 text-white text-3xl hover:text-pink-400"><FiX /></button>
         <img src={zoomedImage} alt="Aperçu agrandi" className="max-w-full max-h-[90vh] object-contain rounded-lg border border-white/20 shadow-2xl" />
         </motion.div>
-      )}
+        )}
       </AnimatePresence>
 
       {/* ---------- NOUVELLE BARRE DE NAVIGATION (RESPONSIVE) ---------- */}
@@ -368,9 +369,12 @@ export default function Portfolio() {
                       <span className="text-xs text-indigo-200/70 italic">Contexte : Assurer une continuité d'activité fluide et rapide pour des centaines de collaborateurs répartis entre le siège et les différents entrepôts.</span>
                     </div>
                   </div>
-                  <a href="Exemple ticket JIRA.png" download className="ml-6 inline-flex items-center gap-1.5 text-xs bg-indigo-600/20 hover:bg-indigo-600/40 text-indigo-200 px-2.5 py-1.5 rounded-md transition-colors border border-indigo-500/30 w-fit">
-                    <FiDownload /> Ex. Ticket JIRA
-                  </a>
+                  {/* Bouton pour ouvrir l'aperçu du ticket JIRA */}
+                  <button 
+                    onClick={() => setZoomedImage('Exemple ticket JIRA.png')}
+                    className="ml-6 inline-flex items-center gap-1.5 text-xs bg-pink-600/20 hover:bg-pink-600/40 text-pink-200 px-2.5 py-1.5 rounded-md transition-colors border border-pink-500/30 w-fit">
+                    <FiZoomIn /> Voir aperçu ticket JIRA
+                  </button>
                 </li>
                 
                 {/* Mission 3 */}
