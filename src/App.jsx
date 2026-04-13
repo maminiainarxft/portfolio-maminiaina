@@ -472,20 +472,12 @@ export default function Portfolio() {
               </a>
             </div>
 
-            <div className="relative group cursor-pointer" onClick={() => setIsZoomed(true)}>
-              <div className="absolute inset-0 bg-indigo-500/20 group-hover:bg-transparent transition-colors rounded-xl z-10 flex items-center justify-center">
-                <div className="bg-black/80 text-white px-4 py-2 rounded-full flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity transform group-hover:scale-110">
-                  <FiZoomIn /> Agrandir l'aperçu
-                </div>
-              </div>
-              <div className="w-full aspect-[4/3] bg-slate-700 rounded-xl border-2 border-dashed border-slate-500 flex flex-col items-center justify-center overflow-hidden relative">
-                <img src="./apercu_e4.jpg" alt="Aperçu indisponible" className="object-cover opacity-30 w-full h-full" onError={(e) => e.target.style.display='none'} />
-                <div className="absolute flex flex-col items-center text-slate-400">
-                  <FiBookOpen className="text-4xl mb-2" />
-                  <span className="text-sm font-semibold">Cliquer pour voir l'aperçu</span>
-                </div>
-              </div>
-            </div>
+            {/* Bouton pour ouvrir l'aperçu du ticket JIRA */}
+              <button 
+                onClick={() => setZoomedImage('Exemple ticket JIRA.png')}
+                className="ml-6 inline-flex items-center gap-1.5 text-xs bg-pink-600/20 hover:bg-pink-600/40 text-pink-200 px-2.5 py-1.5 rounded-md transition-colors border border-pink-500/30 w-fit">
+                <FiZoomIn /> Voir aperçu ticket JIRA
+              </button>
           </div>
         </motion.div>
       </Section>
