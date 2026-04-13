@@ -364,8 +364,6 @@ export default function Portfolio() {
                       <FiCheckCircle className="text-pink-400 mt-1 shrink-0" />
                       <span><strong>Support N1 :</strong> Résolution d'incidents utilisateurs via la gestion de tickets (JIRA).</span>
                     </div>
-                    <a href="Documentation_Support_JIRA.pdf" download className="ml-6 inline-flex items-center gap-1.5 text-xs bg-indigo-600/20 hover:bg-indigo-600/40 text-indigo-200 px-2.5 py-1.5 rounded-md transition-colors border border-indigo-500/30 w-fit">
-                      <FiDownload /> Doc. Support JIRA
                     </a>
                   </li>
                   
@@ -379,21 +377,9 @@ export default function Portfolio() {
                       <FiDownload /> Doc. Active Directory
                     </a>
                   </li>
-
-                  {/* Mission 4 */}
-                  <li className="flex flex-col gap-2 text-sm text-gray-300">
-                    <div className="flex items-start gap-2">
-                      <FiCheckCircle className="text-pink-400 mt-1 shrink-0" />
-                      <span><strong>Masterisation :</strong> Préparation et déploiement logiciel automatisé de nouveaux postes (SCCM).</span>
-                    </div>
-                    <a href="Documentation_Masterisation_SCCM.pdf" download className="ml-6 inline-flex items-center gap-1.5 text-xs bg-indigo-600/20 hover:bg-indigo-600/40 text-indigo-200 px-2.5 py-1.5 rounded-md transition-colors border border-indigo-500/30 w-fit">
-                      <FiDownload /> Doc. Masterisation SCCM
-                    </a>
-                  </li>
                 </ul>
               </div>
             </div>
-
           </div>
         </motion.div>
       </Section>
