@@ -8,7 +8,6 @@ const CV = {
   name: 'Maminiaina Rafetraharivony',
   title: 'Technicien support informatique',
   email: 'landry012345@gmail.com',
-  phone: '0762687880',
   location: 'France',
   linkedin: 'https://www.linkedin.com/in/maminiaina-landry-rafetraharivony-70214833b/', 
   objective: "Passionné par les systèmes, réseaux et la cybersécurité. Je conçois, sécurise et administre des infrastructures informatiques modernes. Toujours en quête d'optimisation et d'automatisation.",
@@ -559,7 +558,6 @@ export default function Portfolio() {
           <div className="bg-slate-800/50 p-6 rounded-2xl border border-white/5 inline-block min-w-[300px]">
             <div className="flex flex-col gap-4">
               <a href={`mailto:${CV.email}`} className="flex items-center gap-3 text-base text-gray-300 hover:text-white transition-colors"><FiMail className="text-indigo-400 text-xl" /> {CV.email}</a>
-              <div className="flex items-center gap-3 text-base text-gray-300"><FiPhone className="text-indigo-400 text-xl" /> {CV.phone}</div>
               <div className="flex items-center gap-3 text-base text-gray-300"><FiMapPin className="text-indigo-400 text-xl" /> {CV.location}</div>
               <div className="w-full h-px bg-white/10 my-2"></div>
               <a href={CV.linkedin} target="_blank" rel="noreferrer" className="flex items-center gap-3 text-base text-gray-300 hover:text-[#0a66c2] transition-colors"><FiLinkedin className="text-[#0a66c2] text-xl" /> Mon réseau professionnel LinkedIn</a>
