@@ -373,9 +373,18 @@ export default function Portfolio() {
                       <span><strong>Gestion des identités :</strong> Administration courante sur Active Directory (RAT).</span>
                     </div>
                   </li>
+
+                  {/* Mission 4 */}
+                  <li className="flex flex-col gap-2 text-sm text-gray-300">
+                    <div className="flex items-start gap-2">
+                      <FiCheckCircle className="text-pink-400 mt-1 shrink-0" />
+                      <span><strong>Masterisation :</strong> Préparation et déploiement logiciel automatisé de nouveaux postes (SCCM).</span>
+                    </div>
+                  </li>
                 </ul>
               </div>
             </div>
+
           </div>
         </motion.div>
       </Section>
@@ -436,4 +445,132 @@ export default function Portfolio() {
               <ul className="space-y-2 mb-6">
                 <li className="flex items-center gap-2 text-sm text-gray-300"><FiCheckCircle className="text-green-400" /> Gérer le patrimoine informatique (Déploiement, Inventaire)</li>
                 <li className="flex items-center gap-2 text-sm text-gray-300"><FiCheckCircle className="text-green-400" /> Répondre aux incidents et aux demandes d'assistance</li>
-                <li className="flex items
+                <li className="flex items-center gap-2 text-sm text-gray-300"><FiCheckCircle className="text-green-400" /> Développer la présence en ligne de l'organisation</li>
+                <li className="flex items-center gap-2 text-sm text-gray-300"><FiCheckCircle className="text-green-400" /> Travailler en mode projet (Planification, Documentation)</li>
+                <li className="flex items-center gap-2 text-sm text-gray-300"><FiCheckCircle className="text-green-400" /> Sécuriser les équipements et les usages</li>
+              </ul>
+
+              <a href="Tableau de synthese E4.pdf" download className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white text-indigo-950 font-bold shadow-lg hover:bg-indigo-50 hover:scale-105 transition-all duration-300">
+                <FiDownload /> Télécharger le PDF officiel
+              </a>
+            </div>
+
+            <div className="relative group cursor-pointer" onClick={() => setIsZoomed(true)}>
+              <div className="absolute inset-0 bg-indigo-500/20 group-hover:bg-transparent transition-colors rounded-xl z-10 flex items-center justify-center">
+                <div className="bg-black/80 text-white px-4 py-2 rounded-full flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity transform group-hover:scale-110">
+                  <FiZoomIn /> Agrandir l'aperçu
+                </div>
+              </div>
+              <div className="w-full aspect-[4/3] bg-slate-700 rounded-xl border-2 border-dashed border-slate-500 flex flex-col items-center justify-center overflow-hidden relative">
+                <img src="./apercu_e4.jpg" alt="Aperçu indisponible" className="object-cover opacity-30 w-full h-full" onError={(e) => e.target.style.display='none'} />
+                <div className="absolute flex flex-col items-center text-slate-400">
+                  <FiBookOpen className="text-4xl mb-2" />
+                  <span className="text-sm font-semibold">Cliquer pour voir l'aperçu</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </motion.div>
+      </Section>
+      
+      {/* ---------- Veille Technologique ---------- */}
+      <Section id="veille">
+        <motion.div initial={{ opacity: 0, y: 15 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
+          <h2 className="text-2xl sm:text-3xl font-bold mb-2">Veille Technologique</h2>
+          <p className="text-gray-400 mb-8">L'innovation au service des systèmes d'information.</p>
+          
+          <div className="space-y-8">
+            <div className="bg-gradient-to-r from-slate-800/80 to-indigo-900/20 p-6 sm:p-8 rounded-2xl border border-indigo-500/20">
+              <h3 className="text-xl font-bold text-white mb-4">Ma démarche et mes outils</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <p className="text-sm text-gray-300 text-justify">
+                  L'informatique étant un secteur en constante évolution, une veille active est indispensable. Je dois m'informer sur les nouvelles failles de sécurité, les évolutions matérielles et les innovations IA. <br/><br/>
+                  <strong>Impact pro :</strong> Cela me permet d'anticiper l'obsolescence, de proposer des outils plus performants et d'appliquer les derniers patchs de sécurité rapidement.
+                </p>
+                <div className="bg-black/30 p-4 rounded-xl border border-white/5 h-fit">
+                  <p className="font-semibold text-indigo-300 mb-2 text-sm">Sources d'informations quotidiennes :</p>
+                  <ul className="space-y-2 text-sm text-gray-300">
+                    <li>• Réseaux sociaux professionnels (LinkedIn, X)</li>
+                    <li>• Médias spécialisés (Frandroid)</li>
+                    <li>• Chaînes techniques YouTube</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-slate-800/40 p-6 sm:p-8 rounded-2xl border border-white/10">
+              <div className="flex flex-col lg:flex-row gap-8">
+                <div className="flex-1">
+                  <h3 className="text-2xl font-bold text-pink-300 mb-4">Sujet d'étude : Des lunettes en tant que téléphone avec l'IA</h3>
+                  <p className="text-sm sm:text-base text-gray-300 text-justify mb-6">
+                    L'intégration de l'Intelligence Artificielle directement dans des lunettes connectées (Smart Glasses) pour en faire un téléphone transforme la façon dont nous interagissons avec la technologie. Ce qui relevait de la science-fiction devient une réalité matérielle.
+                  </p>
+                  
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
+                    <div>
+                      <h4 className="font-semibold text-indigo-300 mb-2 border-b border-white/10 pb-1">Avancées majeures</h4>
+                      <ul className="list-disc list-inside space-y-1 text-sm text-gray-300">
+                         <li><span className="font-semibold text-white">IA embarquée :</span> Meta Ray-Ban (Llama 3), intégration multimodale (voix + vision).</li>
+                         <li><span className="font-semibold text-white">Puces dédiées :</span> Snapdragon AR1 Gen 1 pour un traitement local ultra-rapide.</li>
+                         <li><span className="font-semibold text-white">Usages pro :</span> Assistance technique à distance en réalité augmentée.</li>
+                      </ul>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-pink-300 mb-2 border-b border-white/10 pb-1">Défis et Freins</h4>
+                      <ul className="list-disc list-inside space-y-1 text-sm text-gray-300">
+                        <li>Miniaturisation et dissipation thermique.</li>
+                        <li>Autonomie de la batterie souvent limitée (3-4h).</li>
+                        <li><strong>Cybersécurité :</strong> Risques liés à la vie privée et à l'enregistrement vidéo discret.</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div className="bg-black/20 p-4 rounded-lg">
+                    <h4 className="font-semibold text-sm mb-2 text-white">Sources étudiées :</h4>
+                    <ul className="space-y-2 text-xs text-gray-400">
+                      <li>🔗 <a href="https://www.youtube.com/watch?v=WW-P3limYc0" target="_blank" rel="noreferrer" className="hover:text-indigo-400 transition-colors">Test des Meta Ray-Ban AI : La révolution invisible (Léo Duff - YouTube)</a></li>
+                      <li>🔗 <a href="https://www.youtube.com/watch?v=YHap1eSs7cg&pp=ygUKbHVuZXR0ZSBJQQ%3D%3D" target="_blank" rel="noreferrer" className="hover:text-indigo-400 transition-colors">L'avenir des lunettes connectées : Bilan 2024 (Frandroid)</a></li>
+                      <li>🔗 <a href="https://www.realite-virtuelle.com/surface-keyboard-le-meta-quest-3-devient-soudain-beaucoup-plus-tentant/" target="_blank" rel="noreferrer" className="hover:text-indigo-400 transition-colors">Réalité mixte et productivité : l'écosystème Meta (Realite-virtuelle.com)</a></li>
+                      <li>🔗 <a href="https://www.google.com/url?rct=j&sa=t&url=https://www.sudinfo.be/id1100977/article/2026-01-28/viture-des-lunettes-virtuelles-portables-appelees-devenir-une-alternative-aux&ct=ga&cd=CAEYAyoTNzg1MzA1OTQ2ODMyMjEyMTM0NDIZMTYzNjRlYjAzYzM2NjYzMTpmcjpmcjpGUg&usg=AOvVaw2M0PUYlWeHDJ3ab287o7G9" target="_blank" rel="noreferrer" className="hover:text-indigo-400 transition-colors">Viture, une alternative aux écrans habituelles</a></li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div className="lg:w-1/3 flex items-center justify-center">
+                  <div className="relative w-full aspect-square rounded-2xl overflow-hidden shadow-2xl shadow-indigo-500/20 group">
+                    <div className="absolute inset-0 bg-gradient-to-br from-indigo-900 to-slate-900 flex flex-col items-center justify-center p-6 text-center">
+                      <div className="text-6xl mb-4 opacity-50">👓</div>
+                      <div className="text-indigo-300 font-bold tracking-widest uppercase text-sm">Smart Glasses & AI</div>
+                      <div className="w-16 h-1 bg-pink-500 mt-4 rounded-full"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </motion.div>
+      </Section>
+
+      {/* ---------- Contact ---------- */}
+      <Section id="contact">
+        <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 0.6 }}>
+          <h2 className="text-2xl sm:text-3xl font-bold mb-8">Contact & Réseaux</h2>
+          <div className="bg-slate-800/50 p-6 rounded-2xl border border-white/5 inline-block min-w-[300px]">
+            <div className="flex flex-col gap-4">
+              <a href={`mailto:${CV.email}`} className="flex items-center gap-3 text-base text-gray-300 hover:text-white transition-colors"><FiMail className="text-indigo-400 text-xl" /> {CV.email}</a>
+              <div className="flex items-center gap-3 text-base text-gray-300"><FiPhone className="text-indigo-400 text-xl" /> {CV.phone}</div>
+              <div className="flex items-center gap-3 text-base text-gray-300"><FiMapPin className="text-indigo-400 text-xl" /> {CV.location}</div>
+              <div className="w-full h-px bg-white/10 my-2"></div>
+              <a href={CV.linkedin} target="_blank" rel="noreferrer" className="flex items-center gap-3 text-base text-gray-300 hover:text-[#0a66c2] transition-colors"><FiLinkedin className="text-[#0a66c2] text-xl" /> Mon réseau professionnel LinkedIn</a>
+            </div>
+          </div>
+        </motion.div>
+      </Section>
+
+      <footer className="py-8 text-center text-sm text-gray-500 border-t border-white/5 bg-black/20">
+        © {new Date().getFullYear()} — Tous droits réservés.
+      </footer>
+    </div>
+  );
+}
