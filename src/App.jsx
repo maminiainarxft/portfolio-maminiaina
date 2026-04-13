@@ -364,7 +364,6 @@ export default function Portfolio() {
                       <FiCheckCircle className="text-pink-400 mt-1 shrink-0" />
                       <span><strong>Support N1 :</strong> Résolution d'incidents utilisateurs via la gestion de tickets (JIRA).</span>
                     </div>
-                    </a>
                   </li>
                   
                   {/* Mission 3 */}
@@ -373,9 +372,6 @@ export default function Portfolio() {
                       <FiCheckCircle className="text-pink-400 mt-1 shrink-0" />
                       <span><strong>Gestion des identités :</strong> Administration courante sur Active Directory (RAT).</span>
                     </div>
-                    <a href="Documentation_Active_Directory.pdf" download className="ml-6 inline-flex items-center gap-1.5 text-xs bg-indigo-600/20 hover:bg-indigo-600/40 text-indigo-200 px-2.5 py-1.5 rounded-md transition-colors border border-indigo-500/30 w-fit">
-                      <FiDownload /> Doc. Active Directory
-                    </a>
                   </li>
                 </ul>
               </div>
