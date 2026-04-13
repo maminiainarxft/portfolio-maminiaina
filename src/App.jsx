@@ -452,35 +452,32 @@ export default function Portfolio() {
         <motion.div initial={{ opacity: 0, y: 15 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
           <h2 className="text-2xl sm:text-3xl font-bold mb-6">Tableau de synthèse E4</h2>
           
-          {/* Suppression du grid-cols-2 pour laisser le texte respirer sur toute la largeur */}
           <div className="bg-slate-800/40 p-6 sm:p-8 rounded-2xl border border-white/10">
-            
-            <p className="text-gray-300 mb-6 text-justify">
+            <p className="text-gray-300 mb-6 text-justify sm:text-lg">
               Le tableau de synthèse regroupe l'ensemble des compétences acquises et mobilisées durant ma formation et mes expériences en entreprise. Il démontre ma capacité à gérer des infrastructures complexes de bout en bout.
             </p>
             
             <h3 className="font-bold text-indigo-300 mb-4">Compétences clés développées :</h3>
             <ul className="space-y-3 mb-8">
-              <li className="flex items-center gap-2 text-sm text-gray-300"><FiCheckCircle className="text-green-400" /> Gérer le patrimoine informatique (Déploiement, Inventaire)</li>
-              <li className="flex items-center gap-2 text-sm text-gray-300"><FiCheckCircle className="text-green-400" /> Répondre aux incidents et aux demandes d'assistance</li>
-              <li className="flex items-center gap-2 text-sm text-gray-300"><FiCheckCircle className="text-green-400" /> Développer la présence en ligne de l'organisation</li>
-              <li className="flex items-center gap-2 text-sm text-gray-300"><FiCheckCircle className="text-green-400" /> Travailler en mode projet (Planification, Documentation)</li>
-              <li className="flex items-center gap-2 text-sm text-gray-300"><FiCheckCircle className="text-green-400" /> Sécuriser les équipements et les usages</li>
+              <li className="flex items-center gap-3 text-sm sm:text-base text-gray-300"><FiCheckCircle className="text-green-400 shrink-0" /> Gérer le patrimoine informatique (Déploiement, Inventaire)</li>
+              <li className="flex items-center gap-3 text-sm sm:text-base text-gray-300"><FiCheckCircle className="text-green-400 shrink-0" /> Répondre aux incidents et aux demandes d'assistance</li>
+              <li className="flex items-center gap-3 text-sm sm:text-base text-gray-300"><FiCheckCircle className="text-green-400 shrink-0" /> Développer la présence en ligne de l'organisation</li>
+              <li className="flex items-center gap-3 text-sm sm:text-base text-gray-300"><FiCheckCircle className="text-green-400 shrink-0" /> Travailler en mode projet (Planification, Documentation)</li>
+              <li className="flex items-center gap-3 text-sm sm:text-base text-gray-300"><FiCheckCircle className="text-green-400 shrink-0" /> Sécuriser les équipements et les usages</li>
             </ul>
 
-            {/* Conteneur Flex pour regrouper les boutons proprement */}
-            <div className="flex flex-wrap items-center gap-4">
+            {/* Conteneur Flex pour aligner les boutons proprement */}
+            <div className="flex flex-wrap items-center gap-4 mt-4 border-t border-white/5 pt-6">
               <a href="Tableau de synthese E4.pdf" download className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white text-indigo-950 font-bold shadow-lg hover:bg-indigo-50 hover:scale-105 transition-all duration-300">
-                <FiDownload className="text-lg" /> Télécharger le PDF officiel
+                <FiDownload /> Télécharger le PDF officiel
               </a>
 
               <button 
-                onClick={() => setZoomedImage('Tableau de synthese E4.pdf')}
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-pink-600/20 hover:bg-pink-600/40 text-pink-200 border border-pink-500/30 transition-all duration-300 font-medium">
-                <FiZoomIn className="text-lg" /> Voir aperçu Tableau E4
+                onClick={() => setZoomedImage('Tableau de synthese E4.png')}
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-pink-600/10 hover:bg-pink-600/30 text-pink-300 transition-colors border border-pink-500/30 font-medium">
+                <FiZoomIn /> Voir aperçu Tableau E4
               </button>
             </div>
-
           </div>
         </motion.div>
       </Section>
