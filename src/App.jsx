@@ -1,7 +1,10 @@
 // Portfolio_MaminiainaRafetraharivony.jsx
 import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FiMail, FiPhone, FiMapPin, FiDownload, FiLinkedin, FiBriefcase, FiBookOpen, FiZoomIn, FiX, FiCheckCircle, FiMenu } from 'react-icons/fi';
+import { 
+  FiMail, FiPhone, FiMapPin, FiDownload, FiLinkedin, 
+  FiBriefcase, FiBookOpen, FiZoomIn, FiX, FiCheckCircle, FiMenu 
+} from 'react-icons/fi';
 
 // ---------- Données principales ----------
 const CV = {
@@ -144,7 +147,7 @@ export default function Portfolio() {
             <button className="absolute top-6 right-6 text-white text-3xl hover:text-pink-400 z-[60]">
               <FiX />
             </button>
-      
+        
             {/* Conteneur de l'aperçu */}
             <div 
               className="w-full max-w-5xl h-[85vh] bg-slate-900 rounded-xl overflow-hidden border border-white/20 shadow-2xl relative"
@@ -174,12 +177,8 @@ export default function Portfolio() {
           
           <div className="flex justify-between items-center">
             <div className="flex items-center gap-2 sm:gap-3">
-              <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-md bg-gradient-to-r from-indigo-700 to-pink-600 flex items-center justify-center font-bold text-white text-xs sm:text-base">
-                MR
-              </div>
-              <button onClick={() => scrollTo('hero')} className="hidden sm:block text-sm font-bold hover:text-indigo-300 transition-colors cursor-pointer">
-                {CV.name}
-              </button>
+              <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-md bg-gradient-to-r from-indigo-700 to-pink-600 flex items-center justify-center font-bold text-white text-xs sm:text-base">MR</div>
+              <button onClick={() => scrollTo('hero')} className="hidden sm:block text-sm font-bold hover:text-indigo-300 transition-colors cursor-pointer">{CV.name}</button>
             </div>
 
             <div className="hidden md:flex gap-4 lg:gap-6">
@@ -308,9 +307,7 @@ export default function Portfolio() {
       {/* ---------- Expérience section ---------- */}
       <Section id="Experience">
         <motion.div initial={{ opacity: 0, y: 15 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
-          <h2 className="text-2xl sm:text-3xl font-bold mb-8 flex items-center gap-3">
-            <FiBriefcase className="text-indigo-400" /> Expérience professionnelle
-          </h2>
+          <h2 className="text-2xl sm:text-3xl font-bold mb-8 flex items-center gap-3"><FiBriefcase className="text-indigo-400" /> Expérience professionnelle</h2>
           
           <div className="space-y-6"> 
             
@@ -400,8 +397,7 @@ export default function Portfolio() {
                     {/* Bouton pour ouvrir l'aperçu du ticket JIRA */}
                     <button 
                       onClick={() => setZoomedImage('Exemple ticket JIRA.png')}
-                      className="ml-6 inline-flex items-center gap-1.5 text-xs bg-pink-600/20 hover:bg-pink-600/40 text-pink-200 px-2.5 py-1.5 rounded-md transition-colors border border-pink-500/30 w-fit"
-                    >
+                      className="ml-6 inline-flex items-center gap-1.5 text-xs bg-pink-600/20 hover:bg-pink-600/40 text-pink-200 px-2.5 py-1.5 rounded-md transition-colors border border-pink-500/30 w-fit">
                       <FiZoomIn /> Voir aperçu ticket JIRA
                     </button>
                   </li>
@@ -438,9 +434,7 @@ export default function Portfolio() {
       {/* ---------- Projets section ---------- */}
       <Section id="projects">
         <motion.div initial={{ opacity: 0, y: 15 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
-          <h2 className="text-2xl sm:text-3xl font-bold mb-2 flex items-center gap-3">
-            <FiBookOpen className="text-pink-400" /> Documentations techniques
-          </h2>
+          <h2 className="text-2xl sm:text-3xl font-bold mb-2 flex items-center gap-3"><FiBookOpen className="text-pink-400" /> Documentations techniques</h2>
           <p className="text-gray-400 mb-8">Chronologie et détails de mes réalisations techniques.</p>
 
           <h3 className="text-xl font-bold text-pink-300 mb-4 border-b border-pink-900 pb-2">Projets de formation (Labo)</h3>
@@ -490,21 +484,11 @@ export default function Portfolio() {
             
             <h3 className="font-bold text-indigo-300 mb-4">Compétences clés développées :</h3>
             <ul className="space-y-3 mb-8">
-              <li className="flex items-center gap-3 text-sm sm:text-base text-gray-300">
-                <FiCheckCircle className="text-green-400 shrink-0" /> Gérer le patrimoine informatique (Déploiement, Inventaire)
-              </li>
-              <li className="flex items-center gap-3 text-sm sm:text-base text-gray-300">
-                <FiCheckCircle className="text-green-400 shrink-0" /> Répondre aux incidents et aux demandes d'assistance
-              </li>
-              <li className="flex items-center gap-3 text-sm sm:text-base text-gray-300">
-                <FiCheckCircle className="text-green-400 shrink-0" /> Développer la présence en ligne de l'organisation
-              </li>
-              <li className="flex items-center gap-3 text-sm sm:text-base text-gray-300">
-                <FiCheckCircle className="text-green-400 shrink-0" /> Travailler en mode projet (Planification, Documentation)
-              </li>
-              <li className="flex items-center gap-3 text-sm sm:text-base text-gray-300">
-                <FiCheckCircle className="text-green-400 shrink-0" /> Sécuriser les équipements et les usages
-              </li>
+              <li className="flex items-center gap-3 text-sm sm:text-base text-gray-300"><FiCheckCircle className="text-green-400 shrink-0" /> Gérer le patrimoine informatique (Déploiement, Inventaire)</li>
+              <li className="flex items-center gap-3 text-sm sm:text-base text-gray-300"><FiCheckCircle className="text-green-400 shrink-0" /> Répondre aux incidents et aux demandes d'assistance</li>
+              <li className="flex items-center gap-3 text-sm sm:text-base text-gray-300"><FiCheckCircle className="text-green-400 shrink-0" /> Développer la présence en ligne de l'organisation</li>
+              <li className="flex items-center gap-3 text-sm sm:text-base text-gray-300"><FiCheckCircle className="text-green-400 shrink-0" /> Travailler en mode projet (Planification, Documentation)</li>
+              <li className="flex items-center gap-3 text-sm sm:text-base text-gray-300"><FiCheckCircle className="text-green-400 shrink-0" /> Sécuriser les équipements et les usages</li>
             </ul>
 
             {/* Conteneur Flex pour aligner les boutons proprement */}
@@ -514,7 +498,7 @@ export default function Portfolio() {
               </a>
 
               <button 
-                onClick={() => setZoomedImage('Tableau de synthese E4.pdf')} // <-- Utilise bien .pdf ici
+                onClick={() => setZoomedImage('Tableau de synthese E4.pdf')}
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-pink-600/10 hover:bg-pink-600/30 text-pink-300 transition-colors border border-pink-500/30 font-medium"
               >
                 <FiZoomIn /> Voir aperçu Tableau E4
