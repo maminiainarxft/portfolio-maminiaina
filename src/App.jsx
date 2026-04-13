@@ -474,9 +474,9 @@ export default function Portfolio() {
 
             {/* Bouton pour ouvrir l'aperçu du ticket JIRA */}
               <button 
-                onClick={() => setZoomedImage('Exemple ticket JIRA.png')}
+                onClick={() => setZoomedImage('Tableau de synthese E4.png')}
                 className="ml-6 inline-flex items-center gap-1.5 text-xs bg-pink-600/20 hover:bg-pink-600/40 text-pink-200 px-2.5 py-1.5 rounded-md transition-colors border border-pink-500/30 w-fit">
-                <FiZoomIn /> Voir aperçu ticket JIRA
+                <FiZoomIn /> Voir aperçu Tableau E4
               </button>
           </div>
         </motion.div>
