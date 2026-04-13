@@ -475,7 +475,7 @@ export default function Portfolio() {
               </a>
 
               <button 
-                onClick={() => setZoomedImage('Tableau de synthese E4.png')}
+                onClick={() => setZoomedImage('Tableau de synthese E4.pdf')}
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-pink-600/20 hover:bg-pink-600/40 text-pink-200 border border-pink-500/30 transition-all duration-300 font-medium">
                 <FiZoomIn className="text-lg" /> Voir aperçu Tableau E4
               </button>
