@@ -366,7 +366,7 @@ export default function Portfolio() {
                       </div>
                     </div>
                     {/* Boutons rendus nettement plus lisibles */}
-                    <a href="/Documentation_Migration_OS.pdf" download className="ml-8 inline-flex items-center gap-2 text-sm font-bold bg-indigo-600 hover:bg-indigo-500 text-white px-4 py-2.5 rounded-lg transition-colors shadow-md w-fit">
+                    <a href="Documentation_Migration_OS.pdf" download className="ml-8 inline-flex items-center gap-2 text-sm font-bold bg-indigo-600 hover:bg-indigo-500 text-white px-4 py-2.5 rounded-lg transition-colors shadow-md w-fit">
                       <FiDownload /> Doc. Migration OS
                     </a>
                   </div>
@@ -380,7 +380,7 @@ export default function Portfolio() {
                         <p className="text-sm text-gray-400">Résolution d'incidents utilisateurs pour assurer une continuité d'activité fluide du siège et des entrepôts.</p>
                       </div>
                     </div>
-                    <button onClick={() => setZoomedImage('/Exemple ticket JIRA.png')} className="ml-8 inline-flex items-center gap-2 text-sm font-bold bg-pink-600 hover:bg-pink-500 text-white px-4 py-2.5 rounded-lg transition-colors shadow-md w-fit">
+                    <button onClick={() => setZoomedImage('Exemple ticket JIRA.png')} className="ml-8 inline-flex items-center gap-2 text-sm font-bold bg-pink-600 hover:bg-pink-500 text-white px-4 py-2.5 rounded-lg transition-colors shadow-md w-fit">
                       <FiZoomIn /> Aperçu Ticket JIRA
                     </button>
                   </div>
@@ -394,7 +394,7 @@ export default function Portfolio() {
                         <p className="text-sm text-gray-400">Administration courante Active Directory, onboarding/offboarding dans le respect de la politique de sécurité.</p>
                       </div>
                     </div>
-                    <a href="/Gestion de privilège AZURE.pdf" download className="ml-8 inline-flex items-center gap-2 text-sm font-bold bg-indigo-600 hover:bg-indigo-500 text-white px-4 py-2.5 rounded-lg transition-colors shadow-md w-fit">
+                    <a href="Gestion de privilège AZURE.pdf" download className="ml-8 inline-flex items-center gap-2 text-sm font-bold bg-indigo-600 hover:bg-indigo-500 text-white px-4 py-2.5 rounded-lg transition-colors shadow-md w-fit">
                       <FiDownload /> Doc. Privilèges AZURE
                     </a>
                   </div>
@@ -408,7 +408,7 @@ export default function Portfolio() {
                         <p className="text-sm text-gray-400">Industrialisation du déploiement logiciel de nouveaux postes pour fournir des équipements Plug & Play.</p>
                       </div>
                     </div>
-                    <button onClick={() => setZoomedImage('/Deploiement de software.png')} className="ml-8 inline-flex items-center gap-2 text-sm font-bold bg-pink-600 hover:bg-pink-500 text-white px-4 py-2.5 rounded-lg transition-colors shadow-md w-fit">
+                    <button onClick={() => setZoomedImage('Deploiement de software.png')} className="ml-8 inline-flex items-center gap-2 text-sm font-bold bg-pink-600 hover:bg-pink-500 text-white px-4 py-2.5 rounded-lg transition-colors shadow-md w-fit">
                       <FiZoomIn /> Aperçu Déploiement Logiciel
                     </button>
                   </div>
@@ -441,7 +441,7 @@ export default function Portfolio() {
                     <p className="text-sm text-gray-400">Résolution rapide des incidents rencontrés par les utilisateurs de l'association.</p>
                   </div>
                 </div>
-                <button onClick={() => setZoomedImage('/Ticket ANATOMS.jpg')} className="ml-8 inline-flex items-center gap-2 text-sm font-bold bg-pink-600 hover:bg-pink-500 text-white px-4 py-2.5 rounded-lg transition-colors shadow-md w-fit">
+                <button onClick={() => setZoomedImage('Ticket ANATOMS.jpg')} className="ml-8 inline-flex items-center gap-2 text-sm font-bold bg-pink-600 hover:bg-pink-500 text-white px-4 py-2.5 rounded-lg transition-colors shadow-md w-fit">
                   <FiZoomIn /> Aperçu Ticket ANATOM'S
                 </button>
               </div>
@@ -538,11 +538,11 @@ export default function Portfolio() {
                 </ul>
 
                 <div className="flex flex-wrap gap-4">
-                  <a href="/Tableau de synthese E4.pdf" download className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-bold shadow-lg shadow-indigo-600/30 hover:shadow-indigo-600/50 hover:-translate-y-1 transition-all">
+                  <a href="Tableau de synthese E4.pdf" download className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-bold shadow-lg shadow-indigo-600/30 hover:shadow-indigo-600/50 hover:-translate-y-1 transition-all">
                     <FiDownload className="text-xl" /> Télécharger E4
                   </a>
                   {/* Bouton Aperçu PDF amélioré pour un maximum de visibilité */}
-                  <button onClick={() => setZoomedImage('/Tableau de synthese E4.pdf')} className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-pink-600 hover:bg-pink-500 text-white font-bold shadow-lg hover:-translate-y-1 transition-all">
+                  <button onClick={() => setZoomedImage('apercu_e4.jpg')} className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-pink-600 hover:bg-pink-500 text-white font-bold shadow-lg hover:-translate-y-1 transition-all">
                     <FiZoomIn className="text-xl" /> Aperçu direct E4
                   </button>
                 </div>
