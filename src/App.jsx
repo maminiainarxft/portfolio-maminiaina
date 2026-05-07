@@ -16,6 +16,7 @@ const CV = {
   objective: "Passionné par les systèmes, réseaux et la cybersécurité. Je conçois, sécurise et administre des infrastructures informatiques modernes. Toujours en quête d'optimisation et d'automatisation.",
 };
 
+// NOTE: previews use files served from `public/` (no placeholder needed)
 // ---------- Données des Projets ----------
 const schoolProjects = [
   {
