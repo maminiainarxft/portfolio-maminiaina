@@ -531,10 +531,11 @@ export default function Portfolio() {
 
                 <div className="flex flex-wrap gap-4">
                   <a href="/Tableau de synthese E4.pdf" download className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-bold shadow-lg shadow-indigo-600/30 hover:shadow-indigo-600/50 hover:-translate-y-1 transition-all">
-                    <FiDownload className="text-xl" /> PDF Officiel
+                    <FiDownload className="text-xl" /> Tableau de synthese
                   </a>
-                  <button onClick={() => setZoomedImage('/apercu_e4.jpg')} className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-white/5 hover:bg-white/10 text-white font-medium border border-white/10 hover:-translate-y-1 transition-all">
-                    <FiZoomIn className="text-xl text-pink-400" /> Aperçu Rapide
+                 {/* Bouton Aperçu PDF */}
+                  <button onClick={() => setZoomedImage('/Tableau de synthese E4.pdf')} className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-white/5 hover:bg-white/10 text-white font-medium border border-white/10 hover:-translate-y-1 transition-all">
+                    <FiZoomIn className="text-xl text-pink-400" /> Aperçu Tableau E4
                   </button>
                 </div>
               </div>
