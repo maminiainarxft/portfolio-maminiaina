@@ -259,7 +259,7 @@ export default function Portfolio() {
                 href="./RAFETRAHARIVONY-Maminiaina-Landry.pdf" download="RAFETRAHARIVONY-Maminiaina-Landry.pdf" 
                 className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-gradient-to-r from-indigo-500 to-pink-500 text-white font-bold shadow-lg shadow-pink-500/25 hover:shadow-pink-500/40 hover:-translate-y-1 transition-all duration-300"
               > 
-                <FiDownload className="text-xl" /> Télécharger mon CV
+                <FiDownload className="text-white text-xl" /> Télécharger mon CV
               </a>
               <a 
                 href={CV.linkedin} target="_blank" rel="noreferrer"
@@ -357,7 +357,7 @@ export default function Portfolio() {
                       </div>
                     </div>
                     <a href="./Documentation_Migration_OS.pdf" download className="ml-8 inline-flex items-center gap-2 text-sm font-bold bg-pink-600 hover:bg-pink-500 text-white px-4 py-2.5 rounded-lg transition-colors shadow-md w-fit">
-                      <FiDownload /> Doc. Migration OS
+                      <FiDownload className="text-white" /> Doc. Migration OS
                     </a>
                   </div>
 
@@ -371,7 +371,7 @@ export default function Portfolio() {
                       </div>
                     </div>
                     <button onClick={() => setZoomedImage('./Exemple ticket JIRA.png')} className="ml-8 inline-flex items-center gap-2 text-sm font-bold bg-pink-600 hover:bg-pink-500 text-white px-4 py-2.5 rounded-lg transition-colors shadow-md w-fit">
-                      <FiZoomIn /> Aperçu Ticket JIRA
+                      <FiZoomIn className="text-white" /> Aperçu Ticket JIRA
                     </button>
                   </div>
 
@@ -385,7 +385,7 @@ export default function Portfolio() {
                       </div>
                     </div>
                     <a href="./Gestion de privilège AZURE.pdf" download className="ml-8 inline-flex items-center gap-2 text-sm font-bold bg-pink-600 hover:bg-pink-500 text-white px-4 py-2.5 rounded-lg transition-colors shadow-md w-fit">
-                      <FiDownload /> Doc. Privilèges AZURE
+                      <FiDownload className="text-white" /> Doc. Privilèges AZURE
                     </a>
                   </div>
 
@@ -399,7 +399,7 @@ export default function Portfolio() {
                       </div>
                     </div>
                     <button onClick={() => setZoomedImage('./Deploiement de software.png')} className="ml-8 inline-flex items-center gap-2 text-sm font-bold bg-pink-600 hover:bg-pink-500 text-white px-4 py-2.5 rounded-lg transition-colors shadow-md w-fit">
-                      <FiZoomIn /> Aperçu Déploiement Logiciel
+                      <FiZoomIn className="text-white" /> Aperçu Déploiement Logiciel
                     </button>
                   </div>
 
@@ -432,7 +432,7 @@ export default function Portfolio() {
                   </div>
                 </div>
                 <button onClick={() => setZoomedImage('./Ticket ANATOMS.jpg')} className="ml-8 inline-flex items-center gap-2 text-sm font-bold bg-pink-600 hover:bg-pink-500 text-white px-4 py-2.5 rounded-lg transition-colors shadow-md w-fit">
-                  <FiZoomIn /> Aperçu Ticket ANATOM'S
+                  <FiZoomIn className="text-white" /> Aperçu Ticket ANATOM'S
                 </button>
               </div>
             </div>
@@ -529,10 +529,10 @@ export default function Portfolio() {
 
                 <div className="flex flex-wrap gap-4">
                   <a href="./Tableau de synthese E4.pdf" download className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-bold shadow-lg shadow-indigo-600/30 hover:shadow-indigo-600/50 hover:-translate-y-1 transition-all">
-                    <FiDownload className="text-xl" /> Télécharger E4
+                    <FiDownload className="text-white text-xl" /> Télécharger E4
                   </a>
                   <button onClick={() => setZoomedImage('./apercu_e4.jpg')} className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-pink-600 hover:bg-pink-500 text-white font-bold shadow-lg hover:-translate-y-1 transition-all">
-                    <FiZoomIn className="text-xl" /> Aperçu direct E4
+                    <FiZoomIn className="text-white text-xl" /> Aperçu direct E4
                   </button>
                 </div>
               </div>
