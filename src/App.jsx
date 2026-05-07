@@ -144,7 +144,7 @@ export default function Portfolio() {
   return (
     <div className="min-h-screen bg-[#0B0F19] text-gray-200 antialiased selection:bg-pink-500/30">
       
-      {/* Fenêtre modale (Zoom) */}
+      {/* Fenêtre modale (Zoom PDF & Images) */}
       <AnimatePresence>
         {zoomedImage && (
           <motion.div 
@@ -166,9 +166,18 @@ export default function Portfolio() {
               onClick={(e) => e.stopPropagation()}
             >
               {zoomedImage.toLowerCase().endsWith('.pdf') ? (
-                <iframe src={`${zoomedImage}#view=FitH`} title="Aperçu PDF" className="w-full h-full border-none" />
+                // L'encodage URI est crucial pour que les espaces dans les noms de fichiers fonctionnent (ex: "Tableau de synthese E4.pdf")
+                <iframe 
+                  src={`${encodeURI(zoomedImage)}#view=FitH`} 
+                  title="Aperçu PDF" 
+                  className="w-full h-full border-none bg-white rounded-2xl" 
+                />
               ) : (
-                <img src={zoomedImage} alt="Aperçu agrandi" className="max-w-full max-h-full object-contain p-2" />
+                <img 
+                  src={encodeURI(zoomedImage)} 
+                  alt="Aperçu agrandi" 
+                  className="w-full h-full object-contain rounded-2xl" 
+                />
               )}
             </motion.div>
           </motion.div>
@@ -260,7 +269,7 @@ export default function Portfolio() {
               </a>
               <a 
                 href={CV.linkedin} target="_blank" rel="noreferrer"
-                className="inline-flex items-center gap-2 px-8 py-4 rounded-xl border border-white/10 bg-white/5 text-white font-medium hover:bg-white/10 hover:-translate-y-1 transition-all duration-300"
+                className="inline-flex items-center gap-2 px-8 py-4 rounded-xl border border-white/20 bg-white/10 text-white font-bold hover:bg-white/20 hover:-translate-y-1 transition-all duration-300"
               >
                 <FiLinkedin className="text-xl text-[#0a66c2]" /> Mon LinkedIn
               </a>
@@ -277,7 +286,6 @@ export default function Portfolio() {
           </h2>
 
           <div className="relative border-l-2 border-indigo-500/30 ml-4 md:ml-0 md:border-none space-y-12">
-            {/* Ligne verticale Desktop */}
             <div className="hidden md:block absolute top-0 bottom-0 left-1/2 w-0.5 bg-gradient-to-b from-indigo-500/50 to-pink-500/50 -translate-x-1/2"></div>
             
             {/* BTS */}
@@ -286,7 +294,6 @@ export default function Portfolio() {
                 <FiBookOpen className="text-xl" />
               </div>
               <div className="w-full md:w-[45%] bg-[#131B2F] p-8 rounded-2xl border border-white/5 hover:border-indigo-500/30 shadow-lg hover:shadow-indigo-500/5 transition-all md:text-right pl-10 md:pl-8 relative">
-                {/* Point repère Mobile */}
                 <div className="md:hidden absolute left-[-9px] top-8 w-4 h-4 rounded-full bg-indigo-500 border-4 border-[#0B0F19]"></div>
                 
                 <h3 className="font-bold text-xl text-indigo-300 mb-1">BTS SIO - Option SISR</h3>
@@ -357,7 +364,8 @@ export default function Portfolio() {
                         <p className="text-sm text-gray-400">Déploiement et migration des postes de Windows 10 vers Windows 11 pour répondre aux exigences de sécurité.</p>
                       </div>
                     </div>
-                    <a href="/Documentation_Migration_OS.pdf" download className="ml-8 inline-flex items-center gap-2 text-xs font-medium bg-indigo-500/10 hover:bg-indigo-500/20 text-indigo-300 px-3 py-2 rounded-lg transition-colors border border-indigo-500/20 w-fit">
+                    {/* Boutons rendus nettement plus lisibles */}
+                    <a href="/Documentation_Migration_OS.pdf" download className="ml-8 inline-flex items-center gap-2 text-sm font-bold bg-indigo-600 hover:bg-indigo-500 text-white px-4 py-2.5 rounded-lg transition-colors shadow-md w-fit">
                       <FiDownload /> Doc. Migration OS
                     </a>
                   </div>
@@ -371,7 +379,7 @@ export default function Portfolio() {
                         <p className="text-sm text-gray-400">Résolution d'incidents utilisateurs pour assurer une continuité d'activité fluide du siège et des entrepôts.</p>
                       </div>
                     </div>
-                    <button onClick={() => setZoomedImage('/Exemple ticket JIRA.png')} className="ml-8 inline-flex items-center gap-2 text-xs font-medium bg-pink-500/10 hover:bg-pink-500/20 text-pink-300 px-3 py-2 rounded-lg transition-colors border border-pink-500/20 w-fit">
+                    <button onClick={() => setZoomedImage('/Exemple ticket JIRA.png')} className="ml-8 inline-flex items-center gap-2 text-sm font-bold bg-pink-600 hover:bg-pink-500 text-white px-4 py-2.5 rounded-lg transition-colors shadow-md w-fit">
                       <FiZoomIn /> Aperçu Ticket JIRA
                     </button>
                   </div>
@@ -385,7 +393,7 @@ export default function Portfolio() {
                         <p className="text-sm text-gray-400">Administration courante Active Directory, onboarding/offboarding dans le respect de la politique de sécurité.</p>
                       </div>
                     </div>
-                    <a href="/Gestion de privilège AZURE.pdf" download className="ml-8 inline-flex items-center gap-2 text-xs font-medium bg-indigo-500/10 hover:bg-indigo-500/20 text-indigo-300 px-3 py-2 rounded-lg transition-colors border border-indigo-500/20 w-fit">
+                    <a href="/Gestion de privilège AZURE.pdf" download className="ml-8 inline-flex items-center gap-2 text-sm font-bold bg-indigo-600 hover:bg-indigo-500 text-white px-4 py-2.5 rounded-lg transition-colors shadow-md w-fit">
                       <FiDownload /> Doc. Privilèges AZURE
                     </a>
                   </div>
@@ -399,7 +407,7 @@ export default function Portfolio() {
                         <p className="text-sm text-gray-400">Industrialisation du déploiement logiciel de nouveaux postes pour fournir des équipements Plug & Play.</p>
                       </div>
                     </div>
-                    <button onClick={() => setZoomedImage('/Deploiement de software.png')} className="ml-8 inline-flex items-center gap-2 text-xs font-medium bg-pink-500/10 hover:bg-pink-500/20 text-pink-300 px-3 py-2 rounded-lg transition-colors border border-pink-500/20 w-fit">
+                    <button onClick={() => setZoomedImage('/Deploiement de software.png')} className="ml-8 inline-flex items-center gap-2 text-sm font-bold bg-pink-600 hover:bg-pink-500 text-white px-4 py-2.5 rounded-lg transition-colors shadow-md w-fit">
                       <FiZoomIn /> Aperçu Déploiement Logiciel
                     </button>
                   </div>
@@ -432,7 +440,7 @@ export default function Portfolio() {
                     <p className="text-sm text-gray-400">Résolution rapide des incidents rencontrés par les utilisateurs de l'association.</p>
                   </div>
                 </div>
-                <button onClick={() => setZoomedImage('/Ticket ANATOMS.jpg')} className="ml-8 inline-flex items-center gap-2 text-xs font-medium bg-pink-500/10 hover:bg-pink-500/20 text-pink-300 px-3 py-2 rounded-lg transition-colors border border-pink-500/20 w-fit">
+                <button onClick={() => setZoomedImage('/Ticket ANATOMS.jpg')} className="ml-8 inline-flex items-center gap-2 text-sm font-bold bg-pink-600 hover:bg-pink-500 text-white px-4 py-2.5 rounded-lg transition-colors shadow-md w-fit">
                   <FiZoomIn /> Aperçu Ticket ANATOM'S
                 </button>
               </div>
@@ -481,12 +489,12 @@ export default function Portfolio() {
                 <div className="mt-6 flex flex-wrap gap-3">
                   {proj.files ? (
                     proj.files.map((f, i) => (
-                      <a key={i} href={f.link} download className="inline-flex items-center gap-2 text-sm font-medium bg-white/5 hover:bg-white/10 text-white px-4 py-2 rounded-xl transition-colors border border-white/10">
+                      <a key={i} href={f.link} download className="inline-flex items-center gap-2 text-sm font-bold bg-white/10 hover:bg-white/20 text-white px-4 py-2.5 rounded-xl transition-colors border border-white/10 shadow-md">
                         <FiDownload className="text-pink-400" /> {f.name}
                       </a>
                     ))
                   ) : (
-                    <a href={proj.file} download className="inline-flex items-center gap-2 text-sm font-medium bg-white/5 hover:bg-white/10 text-white px-4 py-2 rounded-xl transition-colors border border-white/10">
+                    <a href={proj.file} download className="inline-flex items-center gap-2 text-sm font-bold bg-white/10 hover:bg-white/20 text-white px-4 py-2.5 rounded-xl transition-colors border border-white/10 shadow-md">
                       <FiDownload className="text-pink-400" /> Documentation
                     </a>
                   )}
@@ -502,7 +510,6 @@ export default function Portfolio() {
         <motion.div initial={{ opacity: 0, scale: 0.95 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.7 }}>
           <div className="bg-gradient-to-br from-[#131B2F] to-[#0B0F19] p-8 sm:p-12 rounded-[2.5rem] border border-white/10 shadow-2xl relative overflow-hidden">
             
-            {/* Effet lumineux bg */}
             <div className="absolute top-0 right-0 w-64 h-64 bg-indigo-500/10 rounded-full blur-[80px] pointer-events-none"></div>
 
             <div className="relative z-10 flex flex-col md:flex-row gap-10 items-center">
@@ -531,11 +538,11 @@ export default function Portfolio() {
 
                 <div className="flex flex-wrap gap-4">
                   <a href="/Tableau de synthese E4.pdf" download className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-bold shadow-lg shadow-indigo-600/30 hover:shadow-indigo-600/50 hover:-translate-y-1 transition-all">
-                    <FiDownload className="text-xl" /> Tableau de synthese
+                    <FiDownload className="text-xl" /> Télécharger E4
                   </a>
-                 {/* Bouton Aperçu PDF */}
-                  <button onClick={() => setZoomedImage('/Tableau de synthese E4.pdf')} className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-white/5 hover:bg-white/10 text-white font-medium border border-white/10 hover:-translate-y-1 transition-all">
-                    <FiZoomIn className="text-xl text-pink-400" /> Aperçu Tableau E4
+                  {/* Bouton Aperçu PDF amélioré pour un maximum de visibilité */}
+                  <button onClick={() => setZoomedImage('/Tableau de synthese E4.pdf')} className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-pink-600 hover:bg-pink-500 text-white font-bold shadow-lg hover:-translate-y-1 transition-all">
+                    <FiZoomIn className="text-xl" /> Aperçu direct E4
                   </button>
                 </div>
               </div>
@@ -565,8 +572,6 @@ export default function Portfolio() {
           <p className="text-gray-400 mb-12 text-lg text-center md:text-left">L'innovation au service des systèmes d'information et de l'utilisateur.</p>
           
           <div className="space-y-8">
-            
-            {/* Démarche */}
             <div className="bg-gradient-to-r from-[#131B2F] to-[#1a233a] p-8 sm:p-10 rounded-3xl border border-indigo-500/20 shadow-xl">
               <h3 className="text-2xl font-bold text-white mb-6">Ma démarche et mes outils</h3>
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
@@ -585,10 +590,8 @@ export default function Portfolio() {
               </div>
             </div>
 
-            {/* Sujet d'étude principal */}
             <div className="bg-[#131B2F] p-8 sm:p-10 rounded-3xl border border-white/5 shadow-xl">
               <div className="flex flex-col xl:flex-row gap-12">
-                
                 <div className="flex-1">
                   <h3 className="text-2xl sm:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-indigo-400 mb-6">
                     Smart Glasses : De l'échec de Google au triomphe de Meta
@@ -598,7 +601,6 @@ export default function Portfolio() {
                   </p>
                   
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-                    {/* Google Glass */}
                     <div className="bg-[#0B0F19]/50 p-6 rounded-2xl border border-white/5">
                       <h4 className="font-bold text-xl text-indigo-300 mb-4 pb-2 border-b border-white/10 flex items-center gap-3">
                         <span className="text-2xl">📉</span> 2013 : Google Glass
@@ -611,7 +613,6 @@ export default function Portfolio() {
                       </ul>
                     </div>
 
-                    {/* Meta Ray-Ban */}
                     <div className="bg-[#0B0F19]/50 p-6 rounded-2xl border border-white/5">
                       <h4 className="font-bold text-xl text-pink-300 mb-4 pb-2 border-b border-white/10 flex items-center gap-3">
                         <span className="text-2xl">📈</span> 2023 : Meta Ray-Ban
@@ -635,25 +636,20 @@ export default function Portfolio() {
                   </div>
                 </div>
 
-                {/* Visuel Right */}
                 <div className="xl:w-1/3 flex items-center justify-center">
                   <div className="w-full max-w-sm aspect-square rounded-[2rem] bg-gradient-to-br from-[#0B0F19] to-[#1a233a] border border-white/10 shadow-2xl flex flex-col items-center justify-center p-8 text-center relative overflow-hidden group">
                     <div className="absolute inset-0 bg-gradient-to-t from-pink-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                    
                     <div className="text-6xl opacity-40 grayscale mb-2">👓</div>
                     <div className="text-3xl text-pink-500 mb-2 font-black">↓</div>
                     <div className="text-6xl drop-shadow-[0_0_25px_rgba(236,72,153,0.6)] group-hover:scale-110 transition-transform duration-500">🕶️</div>
-                    
                     <div className="mt-8">
                       <div className="text-white font-bold tracking-widest uppercase text-sm mb-1">Design &gt; Tech</div>
                       <div className="text-indigo-300 font-mono text-sm bg-indigo-500/10 py-1 px-3 rounded-full border border-indigo-500/20">Évolution 2013 → 2024</div>
                     </div>
                   </div>
                 </div>
-
               </div>
             </div>
-
           </div>
         </motion.div>
       </Section>
