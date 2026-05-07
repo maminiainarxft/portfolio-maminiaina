@@ -352,11 +352,11 @@ export default function Portfolio() {
                     <div className="flex gap-3">
                       <FiCheckCircle className="text-pink-400 text-xl shrink-0 mt-0.5" />
                       <div>
-                        <span className="font-bold text-white block mb-1">Migration d'OS via SCCM</span>
+                        <span className="font-bold text-white block mb-1">Migration d'OS</span>
                         <p className="text-sm text-gray-400">Déploiement et migration des postes de Windows 10 vers Windows 11 pour répondre aux exigences de sécurité.</p>
                       </div>
                     </div>
-                    <a href="./Documentation_Migration_OS.pdf" download className="ml-8 inline-flex items-center gap-2 text-sm font-bold bg-indigo-600 hover:bg-indigo-500 text-white px-4 py-2.5 rounded-lg transition-colors shadow-md w-fit">
+                    <a href="./Documentation_Migration_OS.pdf" download className="ml-8 inline-flex items-center gap-2 text-sm font-bold bg-pink-600 hover:bg-pink-500 text-white px-4 py-2.5 rounded-lg transition-colors shadow-md w-fit">
                       <FiDownload /> Doc. Migration OS
                     </a>
                   </div>
@@ -366,7 +366,7 @@ export default function Portfolio() {
                     <div className="flex gap-3">
                       <FiCheckCircle className="text-pink-400 text-xl shrink-0 mt-0.5" />
                       <div>
-                        <span className="font-bold text-white block mb-1">Support N1 & Tickets (JIRA)</span>
+                        <span className="font-bold text-white block mb-1">Support N1 & Tickets</span>
                         <p className="text-sm text-gray-400">Résolution d'incidents utilisateurs pour assurer une continuité d'activité fluide du siège et des entrepôts.</p>
                       </div>
                     </div>
@@ -380,11 +380,11 @@ export default function Portfolio() {
                     <div className="flex gap-3">
                       <FiCheckCircle className="text-pink-400 text-xl shrink-0 mt-0.5" />
                       <div>
-                        <span className="font-bold text-white block mb-1">Gestion des identités (AD / RAT)</span>
+                        <span className="font-bold text-white block mb-1">Gestion des identités</span>
                         <p className="text-sm text-gray-400">Administration courante Active Directory, onboarding/offboarding dans le respect de la politique de sécurité.</p>
                       </div>
                     </div>
-                    <a href="./Gestion de privilège AZURE.pdf" download className="ml-8 inline-flex items-center gap-2 text-sm font-bold bg-indigo-600 hover:bg-indigo-500 text-white px-4 py-2.5 rounded-lg transition-colors shadow-md w-fit">
+                    <a href="./Gestion de privilège AZURE.pdf" download className="ml-8 inline-flex items-center gap-2 text-sm font-bold bg-pink-600 hover:bg-pink-500 text-white px-4 py-2.5 rounded-lg transition-colors shadow-md w-fit">
                       <FiDownload /> Doc. Privilèges AZURE
                     </a>
                   </div>
@@ -394,7 +394,7 @@ export default function Portfolio() {
                     <div className="flex gap-3">
                       <FiCheckCircle className="text-pink-400 text-xl shrink-0 mt-0.5" />
                       <div>
-                        <span className="font-bold text-white block mb-1">Masterisation (SCCM)</span>
+                        <span className="font-bold text-white block mb-1">Masterisation</span>
                         <p className="text-sm text-gray-400">Industrialisation du déploiement logiciel de nouveaux postes pour fournir des équipements Plug & Play.</p>
                       </div>
                     </div>
