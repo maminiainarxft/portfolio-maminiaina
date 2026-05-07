@@ -16,7 +16,6 @@ const CV = {
   objective: "Passionné par les systèmes, réseaux et la cybersécurité. Je conçois, sécurise et administre des infrastructures informatiques modernes. Toujours en quête d'optimisation et d'automatisation.",
 };
 
-// NOTE: previews use files served from `public/` (no placeholder needed)
 // ---------- Données des Projets ----------
 const schoolProjects = [
   {
@@ -167,13 +166,14 @@ export default function Portfolio() {
               onClick={(e) => e.stopPropagation()}
             >
               {zoomedImage.toLowerCase().endsWith('.pdf') ? (
-                // L'encodage URI est crucial pour que les espaces dans les noms de fichiers fonctionnent (ex: "Tableau de synthese E4.pdf")
+                // EncodeURI permet de gérer les espaces dans les noms de fichiers PDF
                 <iframe 
                   src={`${encodeURI(zoomedImage)}#view=FitH`} 
                   title="Aperçu PDF" 
                   className="w-full h-full border-none bg-white rounded-2xl" 
                 />
               ) : (
+                // EncodeURI permet de gérer les espaces dans les noms de fichiers Images
                 <img 
                   src={encodeURI(zoomedImage)} 
                   alt="Aperçu agrandi" 
@@ -189,7 +189,6 @@ export default function Portfolio() {
       <nav className="fixed w-full z-40 top-4 left-0 px-4 sm:px-6">
         <div className="max-w-5xl mx-auto py-3 px-5 backdrop-blur-xl bg-[#131B2F]/80 rounded-2xl border border-white/10 shadow-2xl flex justify-between items-center transition-all">
           
-          {/* Logo / Nom */}
           <div className="flex items-center gap-3 cursor-pointer group" onClick={() => scrollTo('hero')}>
             <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-indigo-500 to-pink-500 flex items-center justify-center font-bold text-white shadow-lg group-hover:scale-105 transition-transform">
               MR
@@ -199,7 +198,6 @@ export default function Portfolio() {
             </span>
           </div>
 
-          {/* Liens Desktop */}
           <div className="hidden md:flex items-center gap-6">
             {navLinks.map((link) => (
               <button 
@@ -212,7 +210,6 @@ export default function Portfolio() {
             ))}
           </div>
 
-          {/* Bouton Menu Mobile */}
           <button 
             className="md:hidden text-2xl text-gray-300 hover:text-white transition-colors focus:outline-none p-2"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -221,7 +218,6 @@ export default function Portfolio() {
           </button>
         </div>
 
-        {/* Menu Mobile Déroulant */}
         <AnimatePresence>
           {isMobileMenuOpen && (
             <motion.div 
@@ -246,7 +242,6 @@ export default function Portfolio() {
 
       {/* --- HERO SECTION --- */}
       <header id="hero" className="min-h-screen flex items-center px-4 sm:px-6 lg:px-8 relative overflow-hidden">
-        {/* Cercles de fond */}
         <div className="absolute top-1/3 left-1/4 w-[500px] h-[500px] bg-indigo-600/20 rounded-full blur-[120px] mix-blend-screen pointer-events-none animate-pulse duration-1000"></div>
         <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-pink-600/15 rounded-full blur-[100px] mix-blend-screen pointer-events-none"></div>
 
@@ -289,7 +284,6 @@ export default function Portfolio() {
           <div className="relative border-l-2 border-indigo-500/30 ml-4 md:ml-0 md:border-none space-y-12">
             <div className="hidden md:block absolute top-0 bottom-0 left-1/2 w-0.5 bg-gradient-to-b from-indigo-500/50 to-pink-500/50 -translate-x-1/2"></div>
             
-            {/* BTS */}
             <div className="relative flex flex-col md:flex-row items-center md:justify-between group">
               <div className="hidden md:flex absolute left-1/2 -translate-x-1/2 w-12 h-12 rounded-full border-4 border-[#0B0F19] bg-indigo-500 text-white shadow-lg items-center justify-center z-10 group-hover:scale-110 transition-transform">
                 <FiBookOpen className="text-xl" />
@@ -307,7 +301,6 @@ export default function Portfolio() {
               <div className="hidden md:block w-[45%]"></div>
             </div>
 
-            {/* BAC */}
             <div className="relative flex flex-col md:flex-row-reverse items-center md:justify-between group">
               <div className="hidden md:flex absolute left-1/2 -translate-x-1/2 w-12 h-12 rounded-full border-4 border-[#0B0F19] bg-pink-500 text-white shadow-lg items-center justify-center z-10 group-hover:scale-110 transition-transform">
                 <FiCheckCircle className="text-xl" />
@@ -356,7 +349,7 @@ export default function Portfolio() {
                 <p className="font-semibold text-white mb-5 text-lg">Missions & Réalisations :</p>
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                   
-                  {/* Mission */}
+                  {/* Mission : Migration OS */}
                   <div className="flex flex-col gap-3">
                     <div className="flex gap-3">
                       <FiCheckCircle className="text-pink-400 text-xl shrink-0 mt-0.5" />
@@ -365,13 +358,13 @@ export default function Portfolio() {
                         <p className="text-sm text-gray-400">Déploiement et migration des postes de Windows 10 vers Windows 11 pour répondre aux exigences de sécurité.</p>
                       </div>
                     </div>
-                    {/* Boutons rendus nettement plus lisibles */}
-                    <a href="Documentation_Migration_OS.pdf" download className="ml-8 inline-flex items-center gap-2 text-sm font-bold bg-indigo-600 hover:bg-indigo-500 text-white px-4 py-2.5 rounded-lg transition-colors shadow-md w-fit">
+                    {/* BOUTON CORRIGÉ - Fort contraste, texte blanc */}
+                    <a href="/Documentation_Migration_OS.pdf" download className="ml-8 inline-flex items-center gap-2 text-sm font-bold bg-indigo-600 hover:bg-indigo-500 text-white px-4 py-2.5 rounded-lg transition-colors shadow-md w-fit">
                       <FiDownload /> Doc. Migration OS
                     </a>
                   </div>
 
-                  {/* Mission */}
+                  {/* Mission : JIRA */}
                   <div className="flex flex-col gap-3">
                     <div className="flex gap-3">
                       <FiCheckCircle className="text-pink-400 text-xl shrink-0 mt-0.5" />
@@ -380,12 +373,13 @@ export default function Portfolio() {
                         <p className="text-sm text-gray-400">Résolution d'incidents utilisateurs pour assurer une continuité d'activité fluide du siège et des entrepôts.</p>
                       </div>
                     </div>
-                    <button onClick={() => setZoomedImage('Exemple ticket JIRA.png')} className="ml-8 inline-flex items-center gap-2 text-sm font-bold bg-pink-600 hover:bg-pink-500 text-white px-4 py-2.5 rounded-lg transition-colors shadow-md w-fit">
+                    {/* BOUTON CORRIGÉ - Chemin avec / ajouté */}
+                    <button onClick={() => setZoomedImage('/Exemple ticket JIRA.png')} className="ml-8 inline-flex items-center gap-2 text-sm font-bold bg-pink-600 hover:bg-pink-500 text-white px-4 py-2.5 rounded-lg transition-colors shadow-md w-fit">
                       <FiZoomIn /> Aperçu Ticket JIRA
                     </button>
                   </div>
 
-                  {/* Mission */}
+                  {/* Mission : AZURE */}
                   <div className="flex flex-col gap-3">
                     <div className="flex gap-3">
                       <FiCheckCircle className="text-pink-400 text-xl shrink-0 mt-0.5" />
@@ -394,12 +388,13 @@ export default function Portfolio() {
                         <p className="text-sm text-gray-400">Administration courante Active Directory, onboarding/offboarding dans le respect de la politique de sécurité.</p>
                       </div>
                     </div>
-                    <a href="Gestion de privilège AZURE.pdf" download className="ml-8 inline-flex items-center gap-2 text-sm font-bold bg-indigo-600 hover:bg-indigo-500 text-white px-4 py-2.5 rounded-lg transition-colors shadow-md w-fit">
+                    {/* BOUTON CORRIGÉ - Chemin avec / ajouté */}
+                    <a href="/Gestion de privilège AZURE.pdf" download className="ml-8 inline-flex items-center gap-2 text-sm font-bold bg-indigo-600 hover:bg-indigo-500 text-white px-4 py-2.5 rounded-lg transition-colors shadow-md w-fit">
                       <FiDownload /> Doc. Privilèges AZURE
                     </a>
                   </div>
 
-                  {/* Mission */}
+                  {/* Mission : Masterisation SCCM */}
                   <div className="flex flex-col gap-3">
                     <div className="flex gap-3">
                       <FiCheckCircle className="text-pink-400 text-xl shrink-0 mt-0.5" />
@@ -408,7 +403,8 @@ export default function Portfolio() {
                         <p className="text-sm text-gray-400">Industrialisation du déploiement logiciel de nouveaux postes pour fournir des équipements Plug & Play.</p>
                       </div>
                     </div>
-                    <button onClick={() => setZoomedImage('Deploiement de software.png')} className="ml-8 inline-flex items-center gap-2 text-sm font-bold bg-pink-600 hover:bg-pink-500 text-white px-4 py-2.5 rounded-lg transition-colors shadow-md w-fit">
+                    {/* BOUTON CORRIGÉ - Chemin avec / ajouté */}
+                    <button onClick={() => setZoomedImage('/Deploiement de software.png')} className="ml-8 inline-flex items-center gap-2 text-sm font-bold bg-pink-600 hover:bg-pink-500 text-white px-4 py-2.5 rounded-lg transition-colors shadow-md w-fit">
                       <FiZoomIn /> Aperçu Déploiement Logiciel
                     </button>
                   </div>
@@ -441,7 +437,8 @@ export default function Portfolio() {
                     <p className="text-sm text-gray-400">Résolution rapide des incidents rencontrés par les utilisateurs de l'association.</p>
                   </div>
                 </div>
-                <button onClick={() => setZoomedImage('Ticket ANATOMS.jpg')} className="ml-8 inline-flex items-center gap-2 text-sm font-bold bg-pink-600 hover:bg-pink-500 text-white px-4 py-2.5 rounded-lg transition-colors shadow-md w-fit">
+                {/* BOUTON CORRIGÉ - Chemin avec / ajouté */}
+                <button onClick={() => setZoomedImage('/Ticket ANATOMS.jpg')} className="ml-8 inline-flex items-center gap-2 text-sm font-bold bg-pink-600 hover:bg-pink-500 text-white px-4 py-2.5 rounded-lg transition-colors shadow-md w-fit">
                   <FiZoomIn /> Aperçu Ticket ANATOM'S
                 </button>
               </div>
@@ -488,15 +485,16 @@ export default function Portfolio() {
                 </div>
                 
                 <div className="mt-6 flex flex-wrap gap-3">
+                  {/* BOUTONS CORRIGÉS - Couleurs plus visibles */}
                   {proj.files ? (
                     proj.files.map((f, i) => (
-                      <a key={i} href={f.link} download className="inline-flex items-center gap-2 text-sm font-bold bg-white/10 hover:bg-white/20 text-white px-4 py-2.5 rounded-xl transition-colors border border-white/10 shadow-md">
-                        <FiDownload className="text-pink-400" /> {f.name}
+                      <a key={i} href={f.link} download className="inline-flex items-center gap-2 text-sm font-bold bg-indigo-600 hover:bg-indigo-500 text-white px-4 py-2.5 rounded-xl transition-colors border border-white/10 shadow-md">
+                        <FiDownload className="text-white" /> {f.name}
                       </a>
                     ))
                   ) : (
-                    <a href={proj.file} download className="inline-flex items-center gap-2 text-sm font-bold bg-white/10 hover:bg-white/20 text-white px-4 py-2.5 rounded-xl transition-colors border border-white/10 shadow-md">
-                      <FiDownload className="text-pink-400" /> Documentation
+                    <a href={proj.file} download className="inline-flex items-center gap-2 text-sm font-bold bg-indigo-600 hover:bg-indigo-500 text-white px-4 py-2.5 rounded-xl transition-colors border border-white/10 shadow-md">
+                      <FiDownload className="text-white" /> Documentation
                     </a>
                   )}
                 </div>
@@ -538,11 +536,12 @@ export default function Portfolio() {
                 </ul>
 
                 <div className="flex flex-wrap gap-4">
-                  <a href="Tableau de synthese E4.pdf" download className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-bold shadow-lg shadow-indigo-600/30 hover:shadow-indigo-600/50 hover:-translate-y-1 transition-all">
+                  {/* BOUTON CORRIGÉ - Chemin avec / ajouté */}
+                  <a href="/Tableau de synthese E4.pdf" download className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-bold shadow-lg shadow-indigo-600/30 hover:shadow-indigo-600/50 hover:-translate-y-1 transition-all">
                     <FiDownload className="text-xl" /> Télécharger E4
                   </a>
-                  {/* Bouton Aperçu PDF amélioré pour un maximum de visibilité */}
-                  <button onClick={() => setZoomedImage('apercu_e4.jpg')} className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-pink-600 hover:bg-pink-500 text-white font-bold shadow-lg hover:-translate-y-1 transition-all">
+                  {/* BOUTON CORRIGÉ - Chemin avec / ajouté */}
+                  <button onClick={() => setZoomedImage('/apercu_e4.jpg')} className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-pink-600 hover:bg-pink-500 text-white font-bold shadow-lg hover:-translate-y-1 transition-all">
                     <FiZoomIn className="text-xl" /> Aperçu direct E4
                   </button>
                 </div>
