@@ -339,12 +339,6 @@ export default function Portfolio() {
                       <span><strong>Support N1 :</strong> Résolution d'incidents utilisateurs</span>
                     </div>
                   </li>
-                  <li className="flex flex-col gap-1 text-sm text-gray-300">
-                    <div className="flex items-start gap-2">
-                      <FiCheckCircle className="text-pink-400 mt-1 shrink-0" />
-                      <span><strong>Masterisation :</strong> Préparation et déploiement logiciel de nouveaux postes.</span>
-                    </div>
-                  </li>
                 </ul>
               </div>
             </div>
@@ -410,6 +404,9 @@ export default function Portfolio() {
                         <span><strong>Gestion des identités :</strong> Administration courante sur Active Directory (RAT).</span>
                         <span className="text-xs text-indigo-200/70 italic">Contexte : Gérer le flux des entrées et sorties (onboarding/offboarding) en attribuant les bons droits d'accès tout en respectant la politique de sécurité.</span>
                       </div>
+                      <a href="Gestion de privilège AZURE.pdf" download className="ml-6 inline-flex items-center gap-1.5 text-xs bg-indigo-600/20 hover:bg-indigo-600/40 text-indigo-200 px-2.5 py-1.5 rounded-md transition-colors border border-indigo-500/30 w-fit">
+                      <FiDownload /> Doc. Gestion de privilège AZURE
+                    </a>
                     </div>
                   </li>
 
@@ -421,6 +418,11 @@ export default function Portfolio() {
                         <span><strong>Masterisation :</strong> Préparation et déploiement logiciel automatisé de nouveaux postes (SCCM).</span>
                         <span className="text-xs text-indigo-200/70 italic">Contexte : Industrialiser la préparation matérielle pour fournir des équipements prêts à l'emploi (Plug & Play) et réduire le temps d'intervention manuel.</span>
                       </div>
+                      <button>
+                        onClick={() => setZoomedImage('Exemple Deploiement de software.png')}
+                        className="ml-6 inline-flex items-center gap-1.5 text-xs bg-pink-600/20 hover:bg-pink-600/40 text-pink-200 px-2.5 py-1.5 rounded-md transition-colors border border-pink-500/30 w-fit"
+                        <FiZoomIn/> Voir aperçu Deploieement de software
+                      </button>
                     </div>
                   </li>
                 </ul>
