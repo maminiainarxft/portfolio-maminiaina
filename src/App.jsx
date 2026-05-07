@@ -24,7 +24,7 @@ const schoolProjects = [
     icon: "🏢",
     context: "Optimisation de la gestion des tickets et de l'inventaire matériel.",
     interest: "Centraliser les demandes d'assistance, réduire le temps de résolution et automatiser l'inventaire via des agents.",
-    file: "/Documentation GLPI.pdf"
+    file: "./Documentation GLPI.pdf"
   },
   {
     title: "Mise en place Load Balancer",
@@ -32,7 +32,7 @@ const schoolProjects = [
     icon: "⚖️",
     context: "Projet d'infrastructure haute disponibilité en environnement virtuel.",
     interest: "Répartir la charge entre plusieurs serveurs web pour garantir la continuité de service en cas de panne.",
-    file: "/DOCUMENTATION Load balancer.pdf"
+    file: "./DOCUMENTATION Load balancer.pdf"
   },
   {
     title: "Supervision Zabbix",
@@ -40,7 +40,7 @@ const schoolProjects = [
     icon: "📈",
     context: "Déploiement d'une solution de monitoring pour le réseau de l'école.",
     interest: "Anticiper les pannes réseaux et matérielles grâce à des remontées d'alertes en temps réel.",
-    file: "/DOCUMENTATION Zabbix RAFETRAHARIVONY Maminiaina.pdf"
+    file: "./DOCUMENTATION Zabbix RAFETRAHARIVONY Maminiaina.pdf"
   },
   {
     title: "Sécurisation 2FA & SSH",
@@ -49,8 +49,8 @@ const schoolProjects = [
     context: "Durcissement des accès serveurs Linux dans le cadre des TP de sécurité.",
     interest: "Bloquer les attaques par force brute et garantir l'identité des administrateurs.",
     files: [
-      { name: "Doc 2FA", link: "/Documentation 2FA.pdf" },
-      { name: "Doc SSH", link: "/documentation ssh Maminiaina RAFETRAHARIVONY.pdf" }
+      { name: "Doc 2FA", link: "./Documentation 2FA.pdf" },
+      { name: "Doc SSH", link: "./documentation ssh Maminiaina RAFETRAHARIVONY.pdf" }
     ]
   },
   {
@@ -59,7 +59,7 @@ const schoolProjects = [
     icon: "🐧",
     context: "Déploiement d'un système Linux 'from scratch' sans interface graphique par défaut.",
     interest: "Maîtriser l'architecture fondamentale d'un système UNIX et le partitionnement avancé.",
-    file: "/DOCUMENTATION installation archlinux maminiaina RAFETRAHARIVONY.pdf"
+    file: "./DOCUMENTATION installation archlinux maminiaina RAFETRAHARIVONY.pdf"
   }
 ];
 
@@ -166,14 +166,12 @@ export default function Portfolio() {
               onClick={(e) => e.stopPropagation()}
             >
               {zoomedImage.toLowerCase().endsWith('.pdf') ? (
-                // EncodeURI permet de gérer les espaces dans les noms de fichiers PDF
                 <iframe 
                   src={`${encodeURI(zoomedImage)}#view=FitH`} 
                   title="Aperçu PDF" 
                   className="w-full h-full border-none bg-white rounded-2xl" 
                 />
               ) : (
-                // EncodeURI permet de gérer les espaces dans les noms de fichiers Images
                 <img 
                   src={encodeURI(zoomedImage)} 
                   alt="Aperçu agrandi" 
@@ -258,7 +256,7 @@ export default function Portfolio() {
 
             <div className="mt-10 flex flex-wrap gap-4 items-center">
               <a 
-                href="/RAFETRAHARIVONY-Maminiaina-Landry.pdf" download="RAFETRAHARIVONY-Maminiaina-Landry.pdf" 
+                href="./RAFETRAHARIVONY-Maminiaina-Landry.pdf" download="RAFETRAHARIVONY-Maminiaina-Landry.pdf" 
                 className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-gradient-to-r from-indigo-500 to-pink-500 text-white font-bold shadow-lg shadow-pink-500/25 hover:shadow-pink-500/40 hover:-translate-y-1 transition-all duration-300"
               > 
                 <FiDownload className="text-xl" /> Télécharger mon CV
@@ -358,8 +356,7 @@ export default function Portfolio() {
                         <p className="text-sm text-gray-400">Déploiement et migration des postes de Windows 10 vers Windows 11 pour répondre aux exigences de sécurité.</p>
                       </div>
                     </div>
-                    {/* BOUTON CORRIGÉ - Fort contraste, texte blanc */}
-                    <a href="/Documentation_Migration_OS.pdf" download className="ml-8 inline-flex items-center gap-2 text-sm font-bold bg-indigo-600 hover:bg-indigo-500 text-white px-4 py-2.5 rounded-lg transition-colors shadow-md w-fit">
+                    <a href="./Documentation_Migration_OS.pdf" download className="ml-8 inline-flex items-center gap-2 text-sm font-bold bg-indigo-600 hover:bg-indigo-500 text-white px-4 py-2.5 rounded-lg transition-colors shadow-md w-fit">
                       <FiDownload /> Doc. Migration OS
                     </a>
                   </div>
@@ -373,8 +370,7 @@ export default function Portfolio() {
                         <p className="text-sm text-gray-400">Résolution d'incidents utilisateurs pour assurer une continuité d'activité fluide du siège et des entrepôts.</p>
                       </div>
                     </div>
-                    {/* BOUTON CORRIGÉ - Chemin avec / ajouté */}
-                    <button onClick={() => setZoomedImage('/Exemple ticket JIRA.png')} className="ml-8 inline-flex items-center gap-2 text-sm font-bold bg-pink-600 hover:bg-pink-500 text-white px-4 py-2.5 rounded-lg transition-colors shadow-md w-fit">
+                    <button onClick={() => setZoomedImage('./Exemple ticket JIRA.png')} className="ml-8 inline-flex items-center gap-2 text-sm font-bold bg-pink-600 hover:bg-pink-500 text-white px-4 py-2.5 rounded-lg transition-colors shadow-md w-fit">
                       <FiZoomIn /> Aperçu Ticket JIRA
                     </button>
                   </div>
@@ -388,8 +384,7 @@ export default function Portfolio() {
                         <p className="text-sm text-gray-400">Administration courante Active Directory, onboarding/offboarding dans le respect de la politique de sécurité.</p>
                       </div>
                     </div>
-                    {/* BOUTON CORRIGÉ - Chemin avec / ajouté */}
-                    <a href="/Gestion de privilège AZURE.pdf" download className="ml-8 inline-flex items-center gap-2 text-sm font-bold bg-indigo-600 hover:bg-indigo-500 text-white px-4 py-2.5 rounded-lg transition-colors shadow-md w-fit">
+                    <a href="./Gestion de privilège AZURE.pdf" download className="ml-8 inline-flex items-center gap-2 text-sm font-bold bg-indigo-600 hover:bg-indigo-500 text-white px-4 py-2.5 rounded-lg transition-colors shadow-md w-fit">
                       <FiDownload /> Doc. Privilèges AZURE
                     </a>
                   </div>
@@ -403,8 +398,7 @@ export default function Portfolio() {
                         <p className="text-sm text-gray-400">Industrialisation du déploiement logiciel de nouveaux postes pour fournir des équipements Plug & Play.</p>
                       </div>
                     </div>
-                    {/* BOUTON CORRIGÉ - Chemin avec / ajouté */}
-                    <button onClick={() => setZoomedImage('/Deploiement de software.png')} className="ml-8 inline-flex items-center gap-2 text-sm font-bold bg-pink-600 hover:bg-pink-500 text-white px-4 py-2.5 rounded-lg transition-colors shadow-md w-fit">
+                    <button onClick={() => setZoomedImage('./Deploiement de software.png')} className="ml-8 inline-flex items-center gap-2 text-sm font-bold bg-pink-600 hover:bg-pink-500 text-white px-4 py-2.5 rounded-lg transition-colors shadow-md w-fit">
                       <FiZoomIn /> Aperçu Déploiement Logiciel
                     </button>
                   </div>
@@ -437,8 +431,7 @@ export default function Portfolio() {
                     <p className="text-sm text-gray-400">Résolution rapide des incidents rencontrés par les utilisateurs de l'association.</p>
                   </div>
                 </div>
-                {/* BOUTON CORRIGÉ - Chemin avec / ajouté */}
-                <button onClick={() => setZoomedImage('/Ticket ANATOMS.jpg')} className="ml-8 inline-flex items-center gap-2 text-sm font-bold bg-pink-600 hover:bg-pink-500 text-white px-4 py-2.5 rounded-lg transition-colors shadow-md w-fit">
+                <button onClick={() => setZoomedImage('./Ticket ANATOMS.jpg')} className="ml-8 inline-flex items-center gap-2 text-sm font-bold bg-pink-600 hover:bg-pink-500 text-white px-4 py-2.5 rounded-lg transition-colors shadow-md w-fit">
                   <FiZoomIn /> Aperçu Ticket ANATOM'S
                 </button>
               </div>
@@ -485,7 +478,6 @@ export default function Portfolio() {
                 </div>
                 
                 <div className="mt-6 flex flex-wrap gap-3">
-                  {/* BOUTONS CORRIGÉS - Couleurs plus visibles */}
                   {proj.files ? (
                     proj.files.map((f, i) => (
                       <a key={i} href={f.link} download className="inline-flex items-center gap-2 text-sm font-bold bg-indigo-600 hover:bg-indigo-500 text-white px-4 py-2.5 rounded-xl transition-colors border border-white/10 shadow-md">
@@ -536,12 +528,10 @@ export default function Portfolio() {
                 </ul>
 
                 <div className="flex flex-wrap gap-4">
-                  {/* BOUTON CORRIGÉ - Chemin avec / ajouté */}
-                  <a href="/Tableau de synthese E4.pdf" download className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-bold shadow-lg shadow-indigo-600/30 hover:shadow-indigo-600/50 hover:-translate-y-1 transition-all">
+                  <a href="./Tableau de synthese E4.pdf" download className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-bold shadow-lg shadow-indigo-600/30 hover:shadow-indigo-600/50 hover:-translate-y-1 transition-all">
                     <FiDownload className="text-xl" /> Télécharger E4
                   </a>
-                  {/* BOUTON CORRIGÉ - Chemin avec / ajouté */}
-                  <button onClick={() => setZoomedImage('/apercu_e4.jpg')} className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-pink-600 hover:bg-pink-500 text-white font-bold shadow-lg hover:-translate-y-1 transition-all">
+                  <button onClick={() => setZoomedImage('./apercu_e4.jpg')} className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-pink-600 hover:bg-pink-500 text-white font-bold shadow-lg hover:-translate-y-1 transition-all">
                     <FiZoomIn className="text-xl" /> Aperçu direct E4
                   </button>
                 </div>
