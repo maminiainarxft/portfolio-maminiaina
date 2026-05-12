@@ -267,7 +267,7 @@ export default function Portfolio() {
                 href="./RAFETRAHARIVONY-Maminiaina-Landry.pdf" download="RAFETRAHARIVONY-Maminiaina-Landry.pdf" 
                 className="inline-flex items-center gap-2 text-sm font-bold bg-indigo-600 hover:bg-indigo-500 text-white px-4 py-2.5 rounded-xl transition-colors border border-white/10 shadow-md"
               > 
-                <FiDownload className=" tect-white text-lg" /> Télécharger mon CV
+                <FiDownload className=" text-white text-lg" /> Télécharger mon CV
               </a>
               <a 
                 href={CV.linkedin} target="_blank" rel="noreferrer"
@@ -365,7 +365,7 @@ export default function Portfolio() {
                       </div>
                     </div>
                     <a href="./Documentation_Migration_OS.pdf" download className="ml-8 inline-flex items-center gap-2 text-sm font-bold bg-indigo-600 hover:bg-indigo-500 text-white px-4 py-2.5 rounded-xl transition-colors border border-white/10 shadow-md">
-                      <FiDownload className="font-bold text-2xl text-white"/> Doc. Migration OS
+                      <FiDownload className="text-white text-gl"/> Doc. Migration OS
                     </a>
                   </div>
 
@@ -393,7 +393,7 @@ export default function Portfolio() {
                       </div>
                     </div>
                     <a href="./Gestion de privilège AZURE.pdf" download className="ml-8 inline-flex items-center gap-2 text-sm font-bold bg-indigo-600 hover:bg-indigo-500 text-white px-4 py-2.5 rounded-xl transition-colors border border-white/10 shadow-md">
-                      <FiDownload className="font-bold text-2xl text-white"/> Doc. Privilèges AZURE
+                      <FiDownload className="text-white text-gl"/> Doc. Privilèges AZURE
                     </a>
                   </div>
 
@@ -542,7 +542,7 @@ export default function Portfolio() {
                     <FiDownload className="text-white text-gl" /> Télécharger E4
                   </a>
                   <button onClick={() => setZoomedImage('./apercu_e4.jpg')} className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-bold shadow-lg hover:-translate-y-1 transition-all">
-                    <FiZoomIn className="text-xl" /> Aperçu direct E4
+                    <FiZoomIn className="text-white text-gl" /> Aperçu direct E4
                   </button>
                 </div>
               </div>
