@@ -487,14 +487,17 @@ export default function Portfolio() {
                 
                 <div className="mt-6 flex flex-wrap gap-3">
                   {proj.files ? (
+                    {/* PARTIE 1 : Pour le projet 2FA & SSH (plusieurs fichiers) */}
                     proj.files.map((f, i) => (
-                      <a key={i} href={f.link} download className="inline-flex items-center gap-2 text-sm font-bold bg-indigo-600 hover:bg-indigo-500 text-white px-4 py-2.5 rounded-xl transition-colors border border-white/10 shadow-md">
-                        <FiDownload className="text-white text-lg" /> {f.name}
-                      </a>
+                    <a key={i} href={f.link} download className="inline-flex items-center gap-2 text-sm font-bold bg-indigo-600 hover:bg-indigo-500 text-white px-4 py-2.5 rounded-xl transition-colors border border-white/10 shadow-md">
+                      <FiDownload className="text-white text-lg" /> 
+                      <span className="text-white">{f.name}</span>
+                    </a>
                     ))
                   ) : (
+                    {/* PARTIE 2 : Pour tous les autres projets (un seul fichier) */}
                     <a href={proj.file} download className="inline-flex items-center gap-2 text-sm font-bold bg-indigo-600 hover:bg-indigo-500 text-white px-4 py-2.5 rounded-xl transition-colors border border-white/10 shadow-md">
-                      <FiDownload className="text-white" />
+                      <FiDownload className="text-white text-lg" /> 
                       <span className="text-white">Documentation</span>
                     </a>
                   )}
