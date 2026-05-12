@@ -60,7 +60,15 @@ const schoolProjects = [
     context: "Déploiement d'un système Linux 'from scratch' sans interface graphique par défaut.",
     interest: "Maîtriser l'architecture fondamentale d'un système UNIX et le partitionnement avancé.",
     file: "./DOCUMENTATION installation archlinux maminiaina RAFETRAHARIVONY.pdf"
-  }
+  },
+  {
+    title: "Installation et configuration de Proxmox VE",
+    date: "Mars 2025",
+    icon: "🖥️",
+    context: "Mise en place d'une plateforme de virtualisation pour héberger plusieurs machines virtuelles.",
+    interest: "Gérer efficacement les ressources matérielles et isoler les environnements de test.",
+    file: "./Installation Proxmox.pdf"
+  },
 ];
 
 // ---------- Composant Animation Texte ----------
