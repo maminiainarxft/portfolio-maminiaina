@@ -365,7 +365,7 @@ export default function Portfolio() {
                       </div>
                     </div>
                     <a href="./Documentation_Migration_OS.pdf" download className="ml-8 inline-flex items-center gap-2 text-sm font-bold bg-indigo-600 hover:bg-indigo-500 text-white px-4 py-2.5 rounded-xl transition-colors border border-white/10 shadow-md">
-                      <FiDownload /> Doc. Migration OS
+                      <FiDownload className="font-bold text-2xl text-white"/> Doc. Migration OS
                     </a>
                   </div>
 
@@ -393,7 +393,7 @@ export default function Portfolio() {
                       </div>
                     </div>
                     <a href="./Gestion de privilège AZURE.pdf" download className="ml-8 inline-flex items-center gap-2 text-sm font-bold bg-indigo-600 hover:bg-indigo-500 text-white px-4 py-2.5 rounded-xl transition-colors border border-white/10 shadow-md">
-                      <FiDownload /> Doc. Privilèges AZURE
+                      <FiDownload className="font-bold text-2xl text-white"/> Doc. Privilèges AZURE
                     </a>
                   </div>
 
@@ -539,7 +539,7 @@ export default function Portfolio() {
 
                 <div className="flex flex-wrap gap-4">
                   <a href="./Tableau de synthese E4.pdf" download className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-bold shadow-lg shadow-indigo-600/30 hover:shadow-indigo-600/50 hover:-translate-y-1 transition-all">
-                    <FiDownload className="text-xl" /> Télécharger E4
+                    <FiDownload className="text-white text-gl" /> Télécharger E4
                   </a>
                   <button onClick={() => setZoomedImage('./apercu_e4.jpg')} className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-bold shadow-lg hover:-translate-y-1 transition-all">
                     <FiZoomIn className="text-xl" /> Aperçu direct E4
