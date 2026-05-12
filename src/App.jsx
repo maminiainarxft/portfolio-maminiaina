@@ -489,12 +489,13 @@ export default function Portfolio() {
                   {proj.files ? (
                     proj.files.map((f, i) => (
                       <a key={i} href={f.link} download className="inline-flex items-center gap-2 text-sm font-bold bg-indigo-600 hover:bg-indigo-500 text-white px-4 py-2.5 rounded-xl transition-colors border border-white/10 shadow-md">
-                        <FiDownload className="text-white" /> {f.name}
+                        <FiDownload className="text-white text-lg" /> {f.name}
                       </a>
                     ))
                   ) : (
                     <a href={proj.file} download className="inline-flex items-center gap-2 text-sm font-bold bg-indigo-600 hover:bg-indigo-500 text-white px-4 py-2.5 rounded-xl transition-colors border border-white/10 shadow-md">
-                      <FiDownload className="text-white" /> Documentation
+                      <FiDownload className="text-white" />
+                      <span className="text-white">Documentation</span>
                     </a>
                   )}
                 </div>
