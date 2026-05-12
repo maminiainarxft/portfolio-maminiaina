@@ -265,9 +265,9 @@ export default function Portfolio() {
             <div className="mt-10 flex flex-wrap gap-4 items-center">
               <a 
                 href="./RAFETRAHARIVONY-Maminiaina-Landry.pdf" download="RAFETRAHARIVONY-Maminiaina-Landry.pdf" 
-                className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-bold shadow-lg shadow-indigo-500/25 hover:shadow-indigo-500/40 hover:-translate-y-1 transition-all duration-300"
+                className="inline-flex items-center gap-2 text-sm font-bold bg-indigo-600 hover:bg-indigo-500 text-white px-4 py-2.5 rounded-xl transition-colors border border-white/10 shadow-md"
               > 
-                <FiDownload className="text-xl" /> Télécharger mon CV
+                <FiDownload className=" tect-white text-lg" /> Télécharger mon CV
               </a>
               <a 
                 href={CV.linkedin} target="_blank" rel="noreferrer"
@@ -364,7 +364,7 @@ export default function Portfolio() {
                         <p className="text-sm text-gray-400">Déploiement et migration des postes de Windows 10 vers Windows 11 pour répondre aux exigences de sécurité.</p>
                       </div>
                     </div>
-                    <a href="./Documentation_Migration_OS.pdf" download className="ml-8 inline-flex items-center gap-2 text-sm font-bold bg-indigo-600 hover:bg-indigo-500 text-white px-4 py-2.5 rounded-lg transition-colors shadow-md w-fit">
+                    <a href="./Documentation_Migration_OS.pdf" download className="ml-8 inline-flex items-center gap-2 text-sm font-bold bg-indigo-600 hover:bg-indigo-500 text-white px-4 py-2.5 rounded-xl transition-colors border border-white/10 shadow-md">
                       <FiDownload /> Doc. Migration OS
                     </a>
                   </div>
@@ -378,7 +378,7 @@ export default function Portfolio() {
                         <p className="text-sm text-gray-400">Résolution d'incidents utilisateurs pour assurer une continuité d'activité fluide du siège et des entrepôts.</p>
                       </div>
                     </div>
-                    <button onClick={() => setZoomedImage('./Exemple ticket JIRA.png')} className="ml-8 inline-flex items-center gap-2 text-sm font-bold bg-indigo-600 hover:bg-indigo-500 text-white px-4 py-2.5 rounded-lg transition-colors shadow-md w-fit">
+                    <button onClick={() => setZoomedImage('./Exemple ticket JIRA.png')} className="ml-8 inline-flex items-center gap-2 text-sm font-bold bg-indigo-600 hover:bg-indigo-500 text-white px-4 py-2.5 rounded-xl transition-colors border border-white/10 shadow-md">
                       <FiZoomIn /> Aperçu Ticket JIRA
                     </button>
                   </div>
@@ -392,7 +392,7 @@ export default function Portfolio() {
                         <p className="text-sm text-gray-400">Administration courante Active Directory, onboarding/offboarding dans le respect de la politique de sécurité.</p>
                       </div>
                     </div>
-                    <a href="./Gestion de privilège AZURE.pdf" download className="ml-8 inline-flex items-center gap-2 text-sm font-bold bg-indigo-600 hover:bg-indigo-500 text-white px-4 py-2.5 rounded-lg transition-colors shadow-md w-fit">
+                    <a href="./Gestion de privilège AZURE.pdf" download className="ml-8 inline-flex items-center gap-2 text-sm font-bold bg-indigo-600 hover:bg-indigo-500 text-white px-4 py-2.5 rounded-xl transition-colors border border-white/10 shadow-md">
                       <FiDownload /> Doc. Privilèges AZURE
                     </a>
                   </div>
@@ -406,7 +406,7 @@ export default function Portfolio() {
                         <p className="text-sm text-gray-400">Industrialisation du déploiement logiciel de nouveaux postes pour fournir des équipements Plug & Play.</p>
                       </div>
                     </div>
-                    <button onClick={() => setZoomedImage('./Deploiement de software.png')} className="ml-8 inline-flex items-center gap-2 text-sm font-bold bg-indigo-600 hover:bg-indigo-500 text-white px-4 py-2.5 rounded-lg transition-colors shadow-md w-fit">
+                    <button onClick={() => setZoomedImage('./Deploiement de software.png')} className="ml-8 inline-flex items-center gap-2 text-sm font-bold bg-indigo-600 hover:bg-indigo-500 text-white px-4 py-2.5 rounded-xl transition-colors border border-white/10 shadow-md">
                       <FiZoomIn /> Aperçu Déploiement Logiciel
                     </button>
                   </div>
